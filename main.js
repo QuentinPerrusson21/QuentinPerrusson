@@ -68,3 +68,27 @@ document.addEventListener('click', function(event) {
         menuToggle.classList.remove('active');
     }
 });
+// Fonction pour mettre à jour l'âge automatiquement
+function updateAge() {
+    const birthDate = new Date('2003-05-20');
+    const today = new Date();
+    
+    let age = today.getFullYear() - birthDate.getFullYear();
+    const monthDiff = today.getMonth() - birthDate.getMonth();
+    
+    if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    
+    // Met à jour l'élément HTML avec l'âge
+    const ageElement = document.querySelector('.info-card:nth-child(2) .info-value');
+    if (ageElement) {
+        ageElement.textContent = age + ' ans';
+    }
+}
+
+// Appeler la fonction au chargement de la page
+updateAge();
+
+// Mettre à jour l'âge tous les jours (pour détecter le changement le jour de l'anniversaire)
+setInterval(updateAge, 24 * 60 * 60 * 1000);
