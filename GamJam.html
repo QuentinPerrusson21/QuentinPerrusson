@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForgeInTheFridge - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/icons.css">
+    <link rel="stylesheet" href="stylesheet.css">    
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="back-btn">
+            <i class='bx bx-arrow-back'></i>
+            <span>Retour au portfolio</span>
+        </a>
+    </header>
+
+    <div class="project-container">
+        
+        <div class="project-hero">
+            <h1>ForgeInTheFridge</h1>
+            <p class="project-tagline">Jeu vidéo type Survivors-like développé sur Godot Engine</p>
+            
+            <div class="status-badges">
+                <span class="badge badge-live">
+                    <i class='bx bx-joystick'></i> 
+                    Jouable
+                </span>
+                <span class="badge badge-github">
+                    <i class='bx bxl-github'></i>
+                    Open Source
+                </span>
+            </div>
+        </div>
+
+        <section class="project-section">
+            <h2>
+                Contexte & Objectif
+            </h2>
+            <p>
+                <strong>ForgeInTheFridge</strong> est un jeu d'action et de survie (rogue-lite) inspiré de Vampire Survivors. Le concept repose sur la gestion de vagues d'ennemis : le joueur doit survivre et éliminer un nombre précis d'adversaires pour débloquer l'accès à la salle suivante.
+            </p>
+            <p style="margin-top: 15px;">
+                Pour offrir de la rejouabilité, le jeu propose <strong>3 classes de personnages distinctes</strong>, chacune possédant ses propres statistiques et mécaniques de combat.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Besoin technique :</strong> Concevoir un jeu vidéo complet et performant de A à Z en utilisant le moteur Godot et son langage natif, le GDScript.
+            </p>
+        </section>
+
+        <section class="project-section">
+            <h2>
+                Stack Technique
+            </h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/godotengine.svg" alt="Godot Engine" style="width: 48px; height: 48px; filter: invert(1);">
+                    <span>Godot 4</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bx-code-alt'></i>
+                    <span>GDScript</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bxs-gamepad'></i>
+                    <span>Game Design</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>
+                Démo & Déploiement
+            </h2>
+            <div class="demo-container">
+                <img src="image/Forge.png" alt="Démo ForgeInTheFridge" class="demo-image">
+                <div class="demo-links">
+                    <a href="https://github.com/QuentinPerrusson21/ForgeInTheFridge" target="_blank" class="demo-btn">
+                        <i class='bx bxl-github'></i>
+                        Voir le code source
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>
+                Challenges Techniques Rencontrés
+            </h2>
+            <ul class="challenge-list">
+                <li class="challenge-item">
+                    <h3>Architecture des 3 Classes</h3>
+                    <p>
+                        <strong>Défi :</strong> Intégrer 3 classes de personnages jouables sans dupliquer le code pour les mouvements de base ou la gestion de la vie, tout en gardant des attaques uniques pour chacun.<br>
+                        <strong>Solution :</strong> J'ai utilisé la programmation orientée objet en GDScript en créant une scène "Joueur" de base (Classe parent) gérant les déplacements et la santé, dont héritent les 3 classes spécifiques (Classes enfants) qui implémentent leurs propres mécaniques d'attaque.
+                    </p>
+                </li>
+                <li class="challenge-item">
+                    <h3>Performances face aux Hordes d'Ennemis</h3>
+                    <p>
+                        <strong>Défi :</strong> Dans un "Survivors-like", des dizaines d'ennemis peuvent apparaître à l'écran en même temps. Il fallait éviter que le jeu ne ralentisse (chute de FPS).<br>
+                        <strong>Solution :</strong> J'ai optimisé l'instanciation (spawn) des ennemis et la détection des collisions dans Godot, en m'assurant que les entités mortes soient correctement supprimées de la mémoire (via <code>queue_free()</code>) pour garder le jeu fluide.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="project-section">
+            <h2>
+                Rétrospective Personnelle
+            </h2>
+            <div class="retrospective-box">
+                <h3 style="margin-bottom: 15px; color: #8552F2;">Ce que j'ai appris :</h3>
+                <ul>
+                    <li><strong>Maîtrise de l'écosystème Godot :</strong> Compréhension approfondie du système de Scènes et de Nœuds (Nodes) pour structurer le projet.</li>
+                    <li><strong>Programmation GDScript :</strong> Utilisation des signaux (Signals) pour faire communiquer les différents éléments du jeu (ex: l'UI, le joueur, et le gestionnaire de salles).</li>
+                    <li><strong>Logique de Game Design :</strong> Équilibrage de la difficulté (rythme d'apparition des ennemis) et conception d'une boucle de gameplay (Game Loop) accrocheuse.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
