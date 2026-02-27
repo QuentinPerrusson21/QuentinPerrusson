@@ -75,9 +75,9 @@
                 Démo & Déploiement
             </h2>
             <div class="demo-container">
-                <img src="image/DaeJang.png" alt="Démo DaeJang" class="demo-image">
+                <img src="image/RetroGame.png" alt="Démo du site de jeux retro" class="demo-image">
                 <div class="demo-links">
-                    <a href="https://github.com/QuentinPerrusson21/DaeJang" target="_blank" class="demo-btn">
+                    <a href="https://github.com/QuentinPerrusson21/RetroGame" target="_blank" class="demo-btn">
                         <i class='bx bxl-github'></i>
                         Voir le code source
                     </a>
@@ -90,17 +90,17 @@
             </h2>
             <ul class="challenge-list">
                 <li class="challenge-item">
-                    <h3>Le Responsive Design (La grille Bootstrap)</h3>
+                    <h3>Gestion Multi-Jeux & Contrôles</h3>
                     <p>
-                        <strong>Défi :</strong> Adapter l'affichage de la carte du restaurant pour que le menu soit bien lisible sur ordinateur, mais aussi sur petit écran (téléphone) sans que tout se chevauche.<br>
-                        <strong>Solution :</strong> J'ai dû me documenter et faire plusieurs tests avec le système de grille de Bootstrap (les classes col-sm, col-md, etc.) pour comprendre comment les colonnes se réorganisent selon la taille de l'écran.
+                        <strong>Défi :</strong> Éviter les conflits de touches entre les jeux et empêcher la page web de défiler pendant une partie.<br>
+                        <strong>Solution :</strong> Création d'un état global (<code>window.jeuActif</code>) pour isoler les contrôles du jeu en cours, et utilisation de <code>e.preventDefault()</code> pour figer l'écran.
                     </p>
                 </li>
                 <li class="challenge-item">
-                    <h3> Personnalisation de l'identité visuelle</h3>
+                    <h3>Sauvegarde Locale des Données</h3>
                     <p>
-                        <strong>Défi :</strong> Éviter que le site ressemble à un modèle Bootstrap "standard" (par défaut), notamment pour la barre de navigation (Navbar) et les couleurs des boutons.<br>
-                        <strong>Solution :</strong> J'ai créé un fichier CSS personnel pour venir "écraser" (surcharger) certaines règles de base de Bootstrap et appliquer la charte graphique de DaeJang.
+                        <strong>Défi :</strong> Conserver les records (High Scores) de chaque jeu et le choix du thème (sombre/clair) même après la fermeture du site.<br>
+                        <strong>Solution :</strong> Utilisation de l'API Web <code>localStorage</code> pour mémoriser ces informations de façon persistante dans le navigateur du joueur.
                     </p>
                 </li>
             </ul>
@@ -111,20 +111,14 @@
             <h2>
                 Rétrospective Personnelle
             </h2>
-            <section class="project-section">
-                <h2>
-                    Rétrospective Personnelle
-                </h2>
-                <div class="retrospective-box">
-                    <h3 style="margin-bottom: 15px; color: #8552F2;">Ce que j'ai appris :</h3>
-                    <ul>
-                        <li><strong>Intégration d'un Framework UI :</strong> Apprentissage de la logique Bootstrap pour accélérer le développement tout en gardant un code propre.</li>
-                        <li><strong>Maîtrise du Responsive Design :</strong> Utilisation du système de grille (Grid System) pour garantir une expérience parfaite du smartphone à l'écran large.</li>
-                        <li><strong>Personnalisation CSS :</strong> Savoir surcharger (override) les composants par défaut de Bootstrap pour créer une identité visuelle unique.</li>
-                        <li><strong>Logique Front-End :</strong> Manipulation du DOM avec JavaScript pour rendre l'interface interactive.</li>
-                    </ul>
-                </div>
-            </section>
+            <div class="retrospective-box">
+                <h3 style="margin-bottom: 15px; color: #8552F2;">Ce que j'ai appris :</h3>
+                <ul>
+                    <li><strong>Logique JavaScript Avancée :</strong> Structuration de code complexe (gestion des états, boucles de jeu, détection de collisions) sans moteur de jeu externe.</li>
+                    <li><strong>Maîtrise des Événements :</strong> Interception fluide des actions de l'utilisateur (clavier, boutons virtuels) pour garantir une jouabilité sans latence.</li>
+                    <li><strong>Persistance des Données :</strong> Manipulation de l'API <code>localStorage</code> pour conserver les meilleurs scores et les préférences de thème des joueurs.</li>
+                </ul>
+            </div>
         </section>
     </div>
 </body>
