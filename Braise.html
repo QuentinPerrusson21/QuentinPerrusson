@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Braise - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/icons.css">
+    <link rel="stylesheet" href="stylesheet.css">    
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="back-btn">
+            <i class='bx bx-arrow-back'></i>
+            <span>Retour au portfolio</span>
+        </a>
+    </header>
+
+    <div class="project-container">
+        
+        <div class="project-hero">
+            <h1>Braise</h1>
+            <p class="project-tagline">Site vitrine dynamique de restaurant avec système de réservation backend</p>
+            
+            <div class="status-badges">
+                <span class="badge badge-live">
+                    <i class='bx bx-check-circle'></i> 
+                    En ligne
+                </span>
+                <span class="badge badge-github">
+                    <i class='bx bxl-github'></i>
+                    Code Source
+                </span>
+            </div>
+        </div>
+
+        <section class="project-section">
+            <h2>
+                Contexte & Objectif
+            </h2>
+            <p>
+                <strong>Braise</strong> est le site web complet d'un restaurant. L'objectif de ce projet était de dépasser la simple intégration visuelle en ajoutant de véritables fonctionnalités interactives et de la communication avec un serveur.
+            </p>
+            <p style="margin-top: 15px;">
+                Le site propose une carte interactive permettant de filtrer facilement les plats (entrées, plats principaux, boissons), ainsi qu'un système de réservation fonctionnel qui traite les données du client et lui envoie une confirmation par e-mail de manière automatisée.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Besoin technique :</strong> Créer une interface fluide (HTML/CSS/JS) couplée à un Back-End en PHP pour le traitement sécurisé des formulaires.
+            </p>
+        </section>
+
+        <section class="project-section">
+            <h2>
+                Stack Technique
+            </h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <i class='bx bxl-html5'></i>
+                    <span>HTML5</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bxl-css3'></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bxl-javascript'></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bxl-php'></i>
+                    <span>PHP</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>
+                Démo & Déploiement
+            </h2>
+            <div class="demo-container">
+                <img src="image/braiseIndex.png" alt="Démo du restaurant Braise" class="demo-image">
+                <div class="demo-links">
+                    <a href="https://github.com/QuentinPerrusson21/Braise" target="_blank" class="demo-btn">
+                        <i class='bx bxl-github'></i>
+                        Voir le code source
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>
+                Challenges Techniques Rencontrés
+            </h2>
+            <ul class="challenge-list">
+                <li class="challenge-item">
+                    <h3>Traitement du Formulaire et Envoi d'E-mail</h3>
+                    <p>
+                        <strong>Défi :</strong> Récupérer les données de réservation saisies par l'utilisateur (nom, date, nombre de personnes), les valider côté serveur, et envoyer un e-mail de confirmation automatique sans utiliser d'API externe payante.<br>
+                        <strong>Solution :</strong> J'ai développé un script PHP qui récupère les données via la méthode <code>POST</code>. J'ai mis en place des vérifications pour éviter les champs vides ou les failles basiques, puis j'ai configuré la fonction native <code>mail()</code> de PHP (avec les bons headers) pour expédier la confirmation directement dans la boîte de réception du client.
+                    </p>
+                </li>
+                <li class="challenge-item">
+                    <h3>Filtrage Dynamique de la Carte</h3>
+                    <p>
+                        <strong>Défi :</strong> Permettre aux utilisateurs de trier le menu (Entrées, Plats, Boissons) de manière instantanée, sans avoir à recharger la page web à chaque clic.<br>
+                        <strong>Solution :</strong> J'ai utilisé JavaScript pour écouter les clics sur les boutons de catégories. En associant des attributs de données (ex: <code>data-category</code>) aux éléments HTML du menu, le script masque ou affiche dynamiquement les bons plats en modifiant leurs classes CSS en temps réel.
+                    </p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="project-section">
+            <h2>
+                Rétrospective Personnelle
+            </h2>
+            <div class="retrospective-box">
+                <h3 style="margin-bottom: 15px; color: #8552F2;">Ce que j'ai appris :</h3>
+                <ul>
+                    <li><strong>Bases du Back-End :</strong> Comprendre le cycle requête/réponse HTTP et la communication entre le Front-End (formulaire) et le serveur (PHP).</li>
+                    <li><strong>Manipulation du DOM :</strong> Création d'une interface réactive avec JavaScript pour améliorer l'expérience utilisateur (UX) sur la lecture du menu.</li>
+                    <li><strong>Fiabilité des données :</strong> Apprentissage de l'importance de sécuriser et de vérifier les entrées utilisateurs avant de les traiter ou d'envoyer un e-mail.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
