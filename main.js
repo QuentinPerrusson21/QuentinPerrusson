@@ -91,3 +91,17 @@ updateAge();
 
 // Mettre à jour l'âge tous les jours (pour détecter le changement le jour de l'anniversaire)
 setInterval(updateAge, 24 * 60 * 60 * 1000);
+
+// Animations au scroll
+const revealElements = document.querySelectorAll('.reveal');
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+            setTimeout(() => {
+                entry.target.classList.add('visible');
+            }, index * 100);
+        }
+    });
+}, { threshold: 0.15 });
+
+revealElements.forEach(el => observer.observe(el));

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ocaria - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="back-btn">
+            <i class='bx bx-arrow-back'></i>
+            <span>Retour au portfolio</span>
+        </a>
+    </header>
+
+    <div class="project-container">
+
+        <div class="project-hero">
+            <h1>Ocaria</h1>
+            <p class="project-tagline">Application mobile communautaire pour les créateurs de personnages originaux (OCs)</p>
+
+            <div class="status-badges">
+                <span class="badge badge-live">
+                    <i class='bx bx-briefcase'></i>
+                    Stage en cours
+                </span>
+                <span class="badge" style="background: rgba(139,92,246,0.15); border: 1px solid #8b5cf6; color: #8b5cf6;">
+                    <i class='bx bx-mobile-alt'></i>
+                    Application Mobile
+                </span>
+            </div>
+        </div>
+
+        <section class="project-section">
+            <h2>Contexte & Objectif</h2>
+            <p>
+                <strong>Ocaria</strong> est une plateforme communautaire dédiée aux créateurs de personnages originaux (OCs). Elle permet aux utilisateurs de créer, partager et mettre en valeur leurs OCs, de rejoindre des thèmes créatifs, et d'interagir avec une communauté passionnée.
+            </p>
+            <p style="margin-top: 15px;">
+                J'ai intégré l'équipe en tant que développeur stagiaire Full-stack, travaillant sur l'application mobile React Native ainsi que sur l'API GraphQL backend.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>Mon rôle :</strong> Développement de nouvelles fonctionnalités front-end et back-end, revues de code, et intégration de retours design.
+            </p>
+        </section>
+
+        <section class="project-section">
+            <h2>Stack Technique</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <i class='bx bxl-react'></i>
+                    <span>React Native</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bxl-typescript'></i>
+                    <span>TypeScript</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bxl-tailwind-css'></i>
+                    <span>NativeWind</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bx-data'></i>
+                    <span>GraphQL</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bxl-nodejs'></i>
+                    <span>NestJS</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bx-server'></i>
+                    <span>Prisma ORM</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bxl-postgresql'></i>
+                    <span>PostgreSQL</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bxl-docker'></i>
+                    <span>Docker</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Outils & Méthodes</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <i class='bx bxl-git'></i>
+                    <span>Git / Fork</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bx-task'></i>
+                    <span>Jira</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bx-table'></i>
+                    <span>DBeaver</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bx-git-pull-request'></i>
+                    <span>Code Review</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Fonctionnalités développées</h2>
+            <ul class="challenge-list">
+                <li class="challenge-item">
+                    <h3>Page Thèmes</h3>
+                    <p>Intégration de la page Thèmes avec système de cards, utilisation de composants du design system (ThemedView, ThemedText) et cohérence des couleurs via le theme.ts.</p>
+                </li>
+                <li class="challenge-item">
+                    <h3>Icône œil sur le champ Password</h3>
+                    <p>Évolution du composant TextInput du design system pour afficher automatiquement une icône permettant de révéler/masquer le mot de passe via un state et un Pressable.</p>
+                </li>
+                <li class="challenge-item">
+                    <h3>Liste des OCs</h3>
+                    <p>Création d'une query GraphQL côté back (NestJS + Prisma), hook useOcs côté front, composant OcCard, et affichage en grille 2 colonnes via FlatList.</p>
+                </li>
+                <li class="challenge-item">
+                    <h3>Page Profil membre</h3>
+                    <p>Création du resolver user(id), page dynamique avec Expo Router ([id].tsx), segmented control Feed/OCs, et récupération des données via Apollo Client.</p>
+                </li>
+            </ul>
+        </section>
+
+        <section class="project-section">
+            <h2>Rétrospective Personnelle</h2>
+            <div class="retrospective-box">
+                <h3 style="margin-bottom: 15px; color: #8b5cf6;">Ce que j'ai appris :</h3>
+                <ul>
+                    <li><strong>TypeScript & typage fort :</strong> Props typées, types générés par GraphQL codegen, gestion des types null/undefined.</li>
+                    <li><strong>Architecture full-stack moderne :</strong> Comprendre le cycle GraphQL de bout en bout, de la définition du schema au hook front-end.</li>
+                    <li><strong>Composants réutilisables :</strong> Concevoir des composants du design system génériques et adaptables (TextInput, ThemedView, SegmentedControl).</li>
+                    <li><strong>Travail en équipe :</strong> Revues de code, gestion des branches Git, intégration de retours et respect des conventions du projet.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
