@@ -1638,6 +1638,29 @@ html {
     border-color: white;
 }
 
+
+@media (hover: none) {
+    .layer {
+        height: auto;
+        min-height: 42%;
+        padding: 24px 20px;
+        justify-content: flex-end;
+    }
+    .row:hover .layer {
+        height: auto;
+    }
+    .row:hover img {
+        transform: none;
+    }
+    .layer h5 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    .layer p {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 768px) {
     .accueil-content h1 {
         font-size: 44px;
