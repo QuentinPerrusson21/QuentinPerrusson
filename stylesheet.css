@@ -91,7 +91,6 @@ body
     width: 100%;
 }
 
-/* Menu hamburger - caché par défaut */
 .menu-toggle {
     display: none;
     flex-direction: column;
@@ -135,9 +134,20 @@ body
     gap: 50px;
 }
 
+.particles-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+}
+
 .accueil-content{
     max-width: 600px;
     flex: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .accueil-content h3 {
@@ -256,6 +266,8 @@ body
     justify-content: center;
     align-items: center;
     max-width: 800px;
+    position: relative;
+    z-index: 1;
     opacity: 0;
     animation: slideLeft 1s ease forwards;
     animation-delay: 1s;
@@ -375,8 +387,6 @@ body
         transform: translateY(0);
     }
 }
-
-/* Section À propos */
 
 .about-section {
     background: #1a1a1a;
@@ -589,14 +599,13 @@ body
     text-align: center;
 }
 
-.main-text h2 span {    
+.main-text h2 span {
     background: #8552F2;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* Filtres */
 .filter-buttons {
     display: flex;
     justify-content: center;
@@ -752,10 +761,6 @@ body
     color: #e7c1f9;
     font-weight: 700;
 }
-
-/* ========================================
-CSS Pour page Projet Hopheis
-   ======================================== */
 
 .back-btn {
     display: flex;
@@ -1149,7 +1154,6 @@ CSS Pour page Projet Hopheis
         font-size: 20px;
     }
 
-    
     .project-container {
         padding: 100px 5% 30px;
     }
@@ -1279,7 +1283,6 @@ CSS Pour page Projet Hopheis
         font-size: 18px;
     }
 
-    
     .project-hero h1 {
         font-size: 28px;
     }
@@ -1364,9 +1367,9 @@ html {
 }
 
 .row {
-    flex: 0 0 calc(50% - 10px); /* 2 cartes par ligne */
+    flex: 0 0 calc(50% - 10px);
     max-width: calc(50% - 10px);
-    height: 400px; /* Hauteur fixe pour toutes les cartes */
+    height: 400px;
     position: relative;
     overflow: hidden;
     border-radius: 10px;
@@ -1375,19 +1378,17 @@ html {
 .row img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* L'image remplit la carte sans déformation */
+    object-fit: cover;
     display: block;
 }
 
-/* Responsive pour mobile */
 @media (max-width: 768px) {
     .row {
-        flex: 0 0 100%; /* 1 carte par ligne sur mobile */
+        flex: 0 0 100%;
         max-width: 100%;
         height: 350px;
     }
 }
-/* Responsive pour la section About */
 .about-container {
     padding: 60px 20px;
     max-width: 1200px;
@@ -1436,63 +1437,59 @@ html {
     font-weight: 500;
 }
 
-/* Tablette (max 992px) */
 @media (max-width: 992px) {
     .about-content {
         flex-direction: column;
         gap: 30px;
     }
-    
+
     .info-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-/* Mobile (max 768px) */
 @media (max-width: 768px) {
     .about-container {
         padding: 40px 15px;
     }
-    
+
     .about-header h2 {
         font-size: 32px;
     }
-    
+
     .info-grid {
         grid-template-columns: 1fr;
         gap: 15px;
     }
-    
+
     .formation-box {
         margin-top: 30px;
     }
 }
 
-/* Petit mobile (max 480px) */
 @media (max-width: 480px) {
     .about-header h2 {
         font-size: 28px;
     }
-    
+
     .about-description {
         font-size: 14px;
     }
-    
+
     .info-card {
         padding: 12px;
     }
-    
+
     .info-icon {
         font-size: 20px;
         min-width: 35px;
     }
-    
+
     .info-value {
         font-size: 13px;
         word-break: break-word;
     }
 }
-/* Bouton de téléchargement CV */
 .cv-download-link {
     display: inline-flex;
     align-items: center;
@@ -1523,7 +1520,6 @@ html {
     font-size: 20px;
 }
 
-/* Si vous voulez une animation au survol de l'icône */
 .cv-download-link:hover i {
     animation: downloadBounce 0.6s ease infinite;
 }
@@ -1537,11 +1533,6 @@ html {
     }
 }
 
-/* ========================================
-   AMÉLIORATIONS VISUELLES
-   ======================================== */
-
-/* 1. HERO — fond avec glow radial et grille subtile */
 .accueil {
     background:
         radial-gradient(ellipse 70% 70% at 75% 50%, rgba(133, 82, 242, 0.22) 0%, transparent 65%),
@@ -1561,7 +1552,6 @@ html {
     pointer-events: none;
 }
 
-/* 2. TYPOGRAPHIE — hero plus impactant */
 .accueil-content h1 {
     font-size: 68px;
     font-weight: 800;
@@ -1587,7 +1577,6 @@ html {
     letter-spacing: -1px;
 }
 
-/* 3. CARDS PROJETS — plus grandes, hover moderne */
 .row {
     height: 480px;
     border-radius: 16px;
@@ -1638,7 +1627,6 @@ html {
     border-color: white;
 }
 
-
 @media (hover: none) {
     .layer {
         height: auto;
@@ -1670,7 +1658,6 @@ html {
     }
 }
 
-/* Section Compétences */
 .skills-section {
     background: #0D0D0D;
     padding: 80px 10%;
@@ -1727,7 +1714,6 @@ html {
     color: #ccc;
 }
 
-/* Footer */
 .footer {
     background: #080808;
     border-top: 1px solid rgba(133, 82, 242, 0.2);
@@ -1790,7 +1776,6 @@ html {
     font-size: 13px;
 }
 
-/* Animations au scroll */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
