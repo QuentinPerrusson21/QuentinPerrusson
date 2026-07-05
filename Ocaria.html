@@ -19,89 +19,105 @@
 
         <div class="project-hero">
             <h1>Ocaria</h1>
-            <p class="project-tagline">Application mobile communautaire pour les créateurs de personnages originaux (OCs)</p>
+            <p class="project-tagline">Réseau social mobile pour créatifs — partage de personnages originaux (OC) et d'illustrations</p>
 
             <div class="status-badges">
                 <span class="badge badge-live">
                     <i class='bx bx-briefcase'></i>
-                    Stage en cours
+                    Stage · 2 mois
                 </span>
                 <span class="badge" style="background: rgba(139,92,246,0.15); border: 1px solid #8b5cf6; color: #8b5cf6;">
                     <i class='bx bx-mobile-alt'></i>
                     Application Mobile
                 </span>
+                <span class="badge" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.3); color: #fff;">
+                    <i class='bx bx-buildings'></i>
+                    Laeticia PIERRE EIRL
+                </span>
             </div>
         </div>
 
         <section class="project-section">
-            <h2>Contexte & Objectif</h2>
+            <h2>Contexte &amp; Objectif</h2>
             <p>
-                <strong>Ocaria</strong> est une plateforme communautaire dédiée aux créateurs de personnages originaux (OCs). Elle permet aux utilisateurs de créer, partager et mettre en valeur leurs OCs, de rejoindre des thèmes créatifs, et d'interagir avec une communauté passionnée.
+                <strong>Ocaria</strong> est un réseau social mobile destiné à une communauté de créatifs, centré sur le partage de personnages originaux (OC) et d'illustrations : publication de posts, association de ses personnages, participation à des thèmes, fil d'actualité et profils.
             </p>
             <p style="margin-top: 15px;">
-                J'ai intégré l'équipe en tant que développeur stagiaire Full-stack, travaillant sur l'application mobile React Native ainsi que sur l'API GraphQL backend.
+                Projet développé lors de mon <strong>stage de 2 mois chez Laeticia PIERRE EIRL</strong>.
             </p>
             <p style="margin-top: 15px;">
-                <strong>Mon rôle :</strong> Développement de nouvelles fonctionnalités front-end et back-end, revues de code, et intégration de retours design.
+                <strong>Mon rôle :</strong> Développeur full-stack, du back-end à l'interface, avec livraison de chaque fonctionnalité via Pull Request et revue de code.
             </p>
         </section>
 
         <section class="project-section">
             <h2>Stack Technique</h2>
+
+            <h3 style="color:#8b5cf6; margin: 10px 0 12px; font-size:18px;">Front-end</h3>
             <div class="tech-stack">
                 <div class="tech-item">
                     <i class='bx bxl-react'></i>
-                    <span>React Native</span>
+                    <span>React Native (Expo)</span>
                 </div>
                 <div class="tech-item">
                     <i class='bx bxl-typescript'></i>
                     <span>TypeScript</span>
                 </div>
                 <div class="tech-item">
+                    <i class='bx bx-data'></i>
+                    <span>Apollo Client (GraphQL)</span>
+                </div>
+                <div class="tech-item">
                     <i class='bx bxl-tailwind-css'></i>
                     <span>NativeWind</span>
+                </div>
+            </div>
+
+            <h3 style="color:#8b5cf6; margin: 25px 0 12px; font-size:18px;">Back-end</h3>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <i class='bx bxl-nodejs'></i>
+                    <span>NestJS</span>
                 </div>
                 <div class="tech-item">
                     <i class='bx bx-data'></i>
                     <span>GraphQL</span>
                 </div>
                 <div class="tech-item">
-                    <i class='bx bxl-nodejs'></i>
-                    <span>NestJS</span>
-                </div>
-                <div class="tech-item">
                     <i class='bx bx-server'></i>
-                    <span>Prisma ORM</span>
+                    <span>Prisma</span>
                 </div>
                 <div class="tech-item">
                     <i class='bx bxl-postgresql'></i>
                     <span>PostgreSQL</span>
                 </div>
                 <div class="tech-item">
+                    <i class='bx bx-lock-alt'></i>
+                    <span>better-auth</span>
+                </div>
+            </div>
+
+            <h3 style="color:#8b5cf6; margin: 25px 0 12px; font-size:18px;">Services &amp; Outils</h3>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <i class='bx bx-cloud'></i>
+                    <span>Cloudflare R2</span>
+                </div>
+                <div class="tech-item">
                     <i class='bx bxl-docker'></i>
                     <span>Docker</span>
                 </div>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <h2>Outils & Méthodes</h2>
-            <div class="tech-stack">
                 <div class="tech-item">
-                    <i class='bx bxl-git'></i>
-                    <span>Git / Fork</span>
+                    <i class='bx bxl-github'></i>
+                    <span>Git / GitHub</span>
                 </div>
                 <div class="tech-item">
                     <i class='bx bx-task'></i>
                     <span>Jira</span>
                 </div>
                 <div class="tech-item">
-                    <i class='bx bx-table'></i>
-                    <span>DBeaver</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bx-git-pull-request'></i>
-                    <span>Code Review</span>
+                    <i class='bx bxl-figma'></i>
+                    <span>Figma</span>
                 </div>
             </div>
         </section>
@@ -110,33 +126,68 @@
             <h2>Fonctionnalités développées</h2>
             <ul class="challenge-list">
                 <li class="challenge-item">
-                    <h3>Page Thèmes</h3>
-                    <p>Intégration de la page Thèmes avec système de cards, utilisation de composants du design system (ThemedView, ThemedText) et cohérence des couleurs via le theme.ts.</p>
+                    <h3>🔐 Authentification</h3>
+                    <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
+                        <li>Connexion via <strong>Discord (OAuth2)</strong> en complément de la connexion e-mail / mot de passe (better-auth, configuration du provider côté serveur et sur le portail développeur Discord).</li>
+                        <li>Flux de <strong>complétion du nom d'utilisateur</strong> après une première connexion Discord : détection des comptes sans username, redirection automatique vers un écran de saisie, formulaire validé (react-hook-form + zod) et mise à jour du profil.</li>
+                    </ul>
                 </li>
                 <li class="challenge-item">
-                    <h3>Icône œil sur le champ Password</h3>
-                    <p>Évolution du composant TextInput du design system pour afficher automatiquement une icône permettant de révéler/masquer le mot de passe via un state et un Pressable.</p>
+                    <h3>📝 Publications &amp; images</h3>
+                    <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
+                        <li>Création de posts (texte + image) dans le fil d'actualité.</li>
+                        <li>Upload d'images sur <strong>Cloudflare R2</strong> (stockage compatible S3).</li>
+                        <li>Refonte de l'upload en <strong>multipart</strong> : endpoint REST dédié <code>POST /upload</code>, pièces jointes « orphelines » rattachées à la publication, sécurité par propriétaire (<code>uploaderId</code>), correction de l'erreur 413.</li>
+                        <li>Affichage des images uploadées dans le feed et sur les profils.</li>
+                        <li>Fil d'actualité <strong>paginé</strong> (chargement des posts par lots au défilement), trié par date (plus récents en premier).</li>
+                    </ul>
                 </li>
                 <li class="challenge-item">
-                    <h3>Liste des OCs</h3>
-                    <p>Création d'une query GraphQL côté back (NestJS + Prisma), hook useOcs côté front, composant OcCard, et affichage en grille 2 colonnes via FlatList.</p>
+                    <h3>🎭 Personnages (OC)</h3>
+                    <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
+                        <li>Association d'un ou plusieurs OC à un post — modélisation d'une relation <strong>many-to-many</strong> (table de liaison + migration).</li>
+                        <li>Modale de sélection d'OC : liste des personnages, barre de recherche, cases à cocher (sélection multiple).</li>
+                        <li>Affichage des OC taggés en étiquettes (chips) avec suppression, et état vide « Who's in this post? ».</li>
+                        <li>Mention des OC directement sur les posts du fil.</li>
+                    </ul>
                 </li>
                 <li class="challenge-item">
-                    <h3>Page Profil membre</h3>
-                    <p>Création du resolver user(id), page dynamique avec Expo Router ([id].tsx), segmented control Feed/OCs, et récupération des données via Apollo Client.</p>
+                    <h3>🗑️ Modération / gestion de contenu</h3>
+                    <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
+                        <li>Suppression d'un post en <strong>soft delete</strong> (le post est masqué mais conservé en base).</li>
+                        <li>Menu contextuel « … » avec fenêtre de confirmation et toast de confirmation.</li>
+                        <li>Vérifications de sécurité côté serveur : le post existe, appartient bien à l'utilisateur, n'est pas déjà supprimé (levée d'exceptions).</li>
+                        <li>Menu de suppression visible uniquement sur ses propres posts.</li>
+                    </ul>
+                </li>
+                <li class="challenge-item">
+                    <h3>🎨 Thèmes</h3>
+                    <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
+                        <li>Affichage du « thème du moment » sur la page d'accueil.</li>
+                        <li>Participation à un thème : lien post ↔ thème, page détail du thème et mention cliquable dans le fil <em>(en cours de finalisation)</em>.</li>
+                    </ul>
+                </li>
+                <li class="challenge-item">
+                    <h3>🧩 Qualité &amp; composants réutilisables</h3>
+                    <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
+                        <li>Extension du composant <code>Button</code> (ajout d'une prop <code>icon</code>).</li>
+                        <li>Composant réutilisable <code>AddImageButton</code> (extrait pour éviter la duplication, suite à une revue de code).</li>
+                        <li>Guard d'authentification et décorateur <code>@CurrentUser</code> compatibles REST et GraphQL (gestion des deux contextes).</li>
+                        <li>Habillage d'écrans au thème de l'app (création de post, saisie du username, etc.).</li>
+                    </ul>
                 </li>
             </ul>
         </section>
 
         <section class="project-section">
-            <h2>Rétrospective Personnelle</h2>
+            <h2>Ce que j'en retire</h2>
             <div class="retrospective-box">
-                <h3 style="margin-bottom: 15px; color: #8b5cf6;">Ce que j'ai appris :</h3>
                 <ul>
-                    <li><strong>TypeScript & typage fort :</strong> Props typées, types générés par GraphQL codegen, gestion des types null/undefined.</li>
-                    <li><strong>Architecture full-stack moderne :</strong> Comprendre le cycle GraphQL de bout en bout, de la définition du schema au hook front-end.</li>
-                    <li><strong>Composants réutilisables :</strong> Concevoir des composants du design system génériques et adaptables (TextInput, ThemedView, SegmentedControl).</li>
-                    <li><strong>Travail en équipe :</strong> Revues de code, gestion des branches Git, intégration de retours et respect des conventions du projet.</li>
+                    <li><strong>Modélisation de données relationnelles :</strong> relations many-to-many, tables de liaison et migrations.</li>
+                    <li><strong>Conception d'API GraphQL :</strong> du schema aux resolvers, jusqu'aux hooks front-end via Apollo Client.</li>
+                    <li><strong>Intégration de services externes :</strong> stockage d'images Cloudflare R2, OAuth2 Discord.</li>
+                    <li><strong>Bonnes pratiques :</strong> sécurité côté serveur, soft delete, upload multipart et composants réutilisables.</li>
+                    <li><strong>Travail en équipe :</strong> branches Git, Pull Requests et revues de code.</li>
                 </ul>
             </div>
         </section>

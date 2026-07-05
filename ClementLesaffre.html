@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clément Lesaffre - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+    <header class="header">
+        <a href="index.html" class="back-btn">
+            <i class='bx bx-arrow-back'></i>
+            <span>Retour au portfolio</span>
+        </a>
+    </header>
+
+    <div class="project-container">
+
+        <div class="project-hero">
+            <h1>Clément Lesaffre</h1>
+            <p class="project-tagline">Refonte complète du site professionnel d'un artiste (apnée · art cyanotype · conférences) — de Hostinger IA vers WordPress &amp; Elementor Pro</p>
+
+            <div class="status-badges">
+                <span class="badge badge-live">
+                    <i class='bx bx-check-circle'></i>
+                    Score SEO 92/100
+                </span>
+                <span class="badge" style="background: rgba(99,142,177,0.15); border: 1px solid #638eb1; color: #9cc3e0;">
+                    <i class='bx bxl-wordpress'></i>
+                    WordPress &amp; Elementor Pro
+                </span>
+                <span class="badge" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.3); color: #fff;">
+                    <i class='bx bx-time-five'></i>
+                    Projet 9 mois
+                </span>
+            </div>
+        </div>
+
+        <section class="project-section">
+            <h2>Contexte &amp; Objectif</h2>
+            <p>
+                Le site d'origine reposait sur le <strong>Website Builder IA d'Hostinger</strong>. Rapide à déployer, cet outil s'est révélé très limitant : code propriétaire et fermé empêchant toute personnalisation CSS/JS avancée, structure HTML sémantiquement pauvre (plusieurs balises <code>&lt;h1&gt;</code> par page) pénalisant le référencement, et une administration qui ne permettait pas au client de gérer son contenu en autonomie.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>La refonte :</strong> migration intégrale vers <strong>WordPress</strong> (CMS open-source, garantissant la pérennité et la propriété des données), associé au constructeur <strong>Elementor Pro</strong> pour un contrôle total du design et une interface d'édition intuitive côté client.
+            </p>
+            <p style="margin-top: 15px;">
+                <strong>L'objectif final</strong> d'un projet mené sur 9 mois : au-delà de la livraison technique, rendre le client totalement <strong>autonome</strong> sur la gestion de son nouvel environnement.
+            </p>
+        </section>
+
+        <section class="project-section">
+            <h2>Stack &amp; Outils</h2>
+            <div class="tech-stack">
+                <div class="tech-item">
+                    <i class='bx bxl-wordpress'></i>
+                    <span>WordPress</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bx-layout'></i>
+                    <span>Elementor Pro</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bxl-css3'></i>
+                    <span>CSS sur-mesure</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bxl-javascript'></i>
+                    <span>JavaScript</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bx-search-alt'></i>
+                    <span>Rank Math SEO</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bx-shield-quarter'></i>
+                    <span>reCAPTCHA v3</span>
+                </div>
+                <div class="tech-item">
+                    <i class='bx bx-image-alt'></i>
+                    <span>WebP</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="project-section">
+            <h2>Front-End &amp; Responsive Design (CSS sur-mesure)</h2>
+            <p>Au-delà des outils de base d'Elementor, l'exigence artistique du client a nécessité l'injection de <strong>CSS sur-mesure</strong>, particulièrement pour l'adaptation mobile.</p>
+            <ul class="challenge-list">
+                <li class="challenge-item">
+                    <h3>Maîtrise du Box Model (padding vs. margin)</h3>
+                    <p><strong>Problème :</strong> sur mobile, des blocs de texte sur fond blanc touchaient les bords de l'écran, dégradant la lisibilité et l'aspect « premium ».</p>
+                    <p style="margin-top: 10px;"><strong>Solution :</strong> ajustement précis des <code>padding</code> (le texte « respire » dans son conteneur) et des <code>margin</code> (décollage des bords). Des marges négatives ont permis des effets de chevauchement texte/image (parallaxe statique), la superposition étant gérée via <code>z-index</code>.</p>
+                </li>
+                <li class="challenge-item">
+                    <h3>La « Carte Événement » (module agenda)</h3>
+                    <p><strong>Problème :</strong> l'affichage par défaut des dates de conférences s'écrasait et devenait illisible sur petits écrans, occupant 100 % de la largeur sans structuration.</p>
+                    <p style="margin-top: 10px;"><strong>Solution :</strong> CSS spécifique via Media Queries transformant le bloc en véritable « carte » centrée et encadrée.</p>
+                    <pre style="background: rgba(0,0,0,0.4); padding: 12px 16px; border-radius: 8px; overflow-x: auto; margin-top: 12px; font-size: 14px; color: #e7c1f9;"><code>@media (max-width: 768px) {
+    .event-card {
+        width: 85%;
+        margin: 0 auto;
+        border: 2px solid #638eb1;
+    }
+}</code></pre>
+                </li>
+                <li class="challenge-item">
+                    <h3>Résolution du « syndrome de l'image élastique »</h3>
+                    <p><strong>Problème :</strong> les photographies d'art et d'apnée se déformaient (étirement/écrasement) selon la largeur des smartphones (iPhone Mini vs. Samsung Ultra).</p>
+                    <p style="margin-top: 10px;"><strong>Solution :</strong> <code>object-fit: cover</code> couplé à <code>width: 100%</code> et <code>height: auto</code> pour remplir le conteneur sans altérer l'<em>aspect ratio</em>. Pour les galeries carrées, ajout de <code>aspect-ratio: 1 / 1</code>.</p>
+                </li>
+                <li class="challenge-item">
+                    <h3>Conteneurs d'arrière-plan (images de fond)</h3>
+                    <p><strong>Problème :</strong> un conteneur avec image d'eau en arrière-plan s'aplatissait sur mobile, l'image n'apparaissant plus que comme une fine ligne.</p>
+                    <p style="margin-top: 10px;"><strong>Solution :</strong> forçage de l'ouverture du conteneur via <code>min-height</code> (ex. <code>min-height: 250px</code>), combiné à <code>background-size: cover</code> et <code>background-position: center center</code>.</p>
+                </li>
+                <li class="challenge-item">
+                    <h3>Contrôle typographique (« Mobile Break »)</h3>
+                    <p><strong>Problème :</strong> les titres longs comme « Clément Lesaffre » se coupaient aléatoirement sur mobile, nuisant à l'image de marque.</p>
+                    <p style="margin-top: 10px;"><strong>Solution :</strong> insertion d'un <code>&lt;span class="mobile-break"&gt;</code> dans le texte, activé uniquement sur mobile pour un retour à la ligne propre. Sur desktop, le span reste inline (inactif).</p>
+                    <pre style="background: rgba(0,0,0,0.4); padding: 12px 16px; border-radius: 8px; overflow-x: auto; margin-top: 12px; font-size: 14px; color: #e7c1f9;"><code>@media (max-width: 767px) {
+    .mobile-break { display: block !important; }
+}</code></pre>
+                </li>
+            </ul>
+        </section>
+
+        <section class="project-section">
+            <h2>Fonctionnalités, Sécurité &amp; Optimisation</h2>
+            <ul class="challenge-list">
+                <li class="challenge-item">
+                    <h3>🛡️ Sécurité &amp; lutte anti-spam (formulaires)</h3>
+                    <p><strong>Problème :</strong> le formulaire de contact était ciblé par des robots, générant un flux important de spam.</p>
+                    <p style="margin-top: 10px;"><strong>Solution — défense à deux niveaux :</strong></p>
+                    <ul style="padding-left: 20px; margin-top: 8px; color: #ddd; line-height: 1.7;">
+                        <li><strong>Honeypot :</strong> champ masqué en CSS ; rempli par les robots qui scannent le HTML, il déclenche le blocage automatique de l'envoi.</li>
+                        <li><strong>Google reCAPTCHA v3 :</strong> validation invisible analysant le comportement en arrière-plan, sans énigme visuelle pour les utilisateurs légitimes.</li>
+                    </ul>
+                </li>
+                <li class="challenge-item">
+                    <h3>⚖️ Conformité légale (RGPD)</h3>
+                    <p>Site professionnel devant être conforme à la réglementation européenne : installation et configuration d'une extension de gestion du consentement des cookies (bandeau), et création d'une page <strong>Mentions Légales</strong> (hébergeur, traitement des données via le formulaire).</p>
+                </li>
+                <li class="challenge-item">
+                    <h3>⚡ Optimisation des médias (performance)</h3>
+                    <p>Site riche en médias HD (photos d'art, vidéos d'apnée) — enjeu : temps de chargement rapide sur mobile.</p>
+                    <ul style="padding-left: 20px; margin-top: 8px; color: #ddd; line-height: 1.7;">
+                        <li><strong>Images :</strong> conversion systématique en <strong>WebP</strong> (compression supérieure sans perte visible) et nettoyage des métadonnées EXIF.</li>
+                        <li><strong>Vidéos :</strong> compression MP4 optimisée et système de <strong>Fallback Image en JS</strong> : détection des connexions mobiles lentes pour remplacer la vidéo d'arrière-plan par une image fixe légère (gain de bande passante et de LCP).</li>
+                    </ul>
+                </li>
+                <li class="challenge-item">
+                    <h3>🔍 Stratégie SEO</h3>
+                    <ul style="padding-left: 20px; margin-top: 8px; color: #ddd; line-height: 1.7;">
+                        <li><strong>Restructuration sémantique :</strong> une seule balise <code>&lt;h1&gt;</code> par page (règle d'or du référencement).</li>
+                        <li><strong>Optimisation On-Page</strong> via l'extension <strong>Rank Math SEO</strong> : renseignement des attributs <code>alt</code> sur toutes les images, travail sur la densité sémantique des mots-clés (apnée, art cyanotype, conférences).</li>
+                        <li><strong>Résultat :</strong> score d'audit SEO de <strong>92/100</strong>, malgré une forte charge visuelle.</li>
+                    </ul>
+                </li>
+            </ul>
+        </section>
+
+        <section class="project-section">
+            <h2>Résultat &amp; Autonomie client</h2>
+
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <div class="impact-number">92/100</div>
+                    <div class="impact-label">Score d'audit SEO</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">9 mois</div>
+                    <div class="impact-label">Durée du projet</div>
+                </div>
+                <div class="impact-card">
+                    <div class="impact-number">100 %</div>
+                    <div class="impact-label">Autonomie client</div>
+                </div>
+            </div>
+
+            <div class="retrospective-box">
+                <h3 style="margin-bottom: 15px; color: #8b5cf6;">Transfert de compétences — Micro-Learning :</h3>
+                <p style="color:#ddd; line-height:1.7; margin-bottom:10px;">L'aboutissement du projet ne résidait pas seulement dans la livraison technique, mais dans le transfert de compétences pour rendre le client autonome.</p>
+                <ul>
+                    <li><strong>Pédagogie asynchrone :</strong> plutôt qu'un long manuel textuel, formation via de très courtes vidéos tutoriels (~30 secondes).</li>
+                    <li><strong>Actions ciblées :</strong> modifier un tarif, uploader une photo dans une galerie, mettre à jour une date dans l'agenda des conférences.</li>
+                    <li><strong>Résultat :</strong> le client, auparavant bloqué par l'outil IA, gère désormais son site en toute autonomie.</li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
