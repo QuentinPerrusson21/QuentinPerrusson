@@ -1786,3 +1786,133 @@ html {
     opacity: 1;
     transform: translateY(0);
 }
+/* ============================================================
+   Bouton de bascule de theme (flottant)
+   ============================================================ */
+.theme-toggle {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 200;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid rgba(133, 82, 242, 0.4);
+    background: rgba(133, 82, 242, 0.14);
+    color: #8552F2;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    backdrop-filter: blur(8px);
+    transition: 0.3s;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+}
+
+.theme-toggle:hover {
+    background: #8552F2;
+    color: #fff;
+    transform: translateY(-2px) rotate(15deg);
+    box-shadow: 0 6px 24px rgba(133, 82, 242, 0.45);
+}
+
+/* ============================================================
+   THEME CLAIR
+   ============================================================ */
+[data-theme="light"] body { background: #f4f4f7; color: #1b1b28; }
+
+[data-theme="light"] .accueil { background: #f4f4f7; }
+[data-theme="light"] .about-section { background: #ececf0; }
+[data-theme="light"] .projet-back { background: #f4f4f7; }
+[data-theme="light"] .skills-section { background: #ececf0; border-top-color: rgba(133, 82, 242, 0.15); }
+[data-theme="light"] .footer { background: #e7e7ee; border-top-color: rgba(133, 82, 242, 0.2); }
+
+[data-theme="light"] .header {
+    background: rgba(255, 255, 255, 0.85);
+    border-bottom-color: rgba(133, 82, 242, 0.2);
+    box-shadow: 0 4px 30px rgba(133, 82, 242, 0.1);
+}
+[data-theme="light"] .logo,
+[data-theme="light"] .footer-name {
+    background: linear-gradient(135deg, #1b1b28, #8552F2);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+[data-theme="light"] .navbar a { color: #444; }
+[data-theme="light"] .navbar a:hover { color: #000; }
+[data-theme="light"] .menu-toggle span { background: #333; }
+
+[data-theme="light"] .about-header h2,
+[data-theme="light"] .formation-item h4,
+[data-theme="light"] .info-value,
+[data-theme="light"] .no-projects p,
+[data-theme="light"] .challenge-item h3 { color: #1b1b28; }
+
+[data-theme="light"] .about-description,
+[data-theme="light"] .formation-school,
+[data-theme="light"] .project-tagline,
+[data-theme="light"] .footer-desc,
+[data-theme="light"] .skill-card span,
+[data-theme="light"] .project-section p { color: #55556a; }
+
+[data-theme="light"] .info-label { color: #77778c; }
+[data-theme="light"] .footer-copy { color: #8a8a99; }
+
+[data-theme="light"] .formation-box,
+[data-theme="light"] .skill-tag,
+[data-theme="light"] .info-card,
+[data-theme="light"] .project-section,
+[data-theme="light"] .challenge-item,
+[data-theme="light"] .skill-card {
+    background: #ffffff;
+    border-color: rgba(133, 82, 242, 0.22);
+}
+[data-theme="light"] .info-card:hover { background: #faf7ff; }
+[data-theme="light"] .skill-card:hover { background: #f3ecff; }
+
+[data-theme="light"] .filter-btn { color: #8552F2; }
+
+[data-theme="light"] .tech-item {
+    background: linear-gradient(135deg, rgba(133, 82, 242, 0.09), rgba(133, 82, 242, 0.04));
+}
+[data-theme="light"] .tech-item i { color: #8552F2; }
+
+[data-theme="light"] .project-hero h1 {
+    background: linear-gradient(135deg, #1b1b28, #8552F2);
+    -webkit-background-clip: text;
+    background-clip: text;
+}
+
+[data-theme="light"] .demo-container { background: #f0f0f5; }
+
+/* Textes definis en inline (color:#ddd) sur les pages projet : forcer en clair */
+[data-theme="light"] .challenge-item ul,
+[data-theme="light"] .challenge-item li,
+[data-theme="light"] .retrospective-box p,
+[data-theme="light"] .retrospective-box li { color: #44444f !important; }
+
+@media (max-width: 768px) {
+    [data-theme="light"] .navbar { background: rgba(255, 255, 255, 0.97); }
+}
+
+.badge-neutral {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: #fff;
+}
+[data-theme="light"] .badge-neutral {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.15);
+    color: #333;
+}
+
+[data-theme="light"] .badge-github {
+    background: rgba(133, 82, 242, 0.08);
+    border-color: #8552F2;
+    color: #8552F2;
+}
+
+/* Logos SVG (simple-icons) inverses en blanc pour le sombre :
+   en mode clair on retire l'inversion pour qu'ils restent visibles */
+[data-theme="light"] .tech-item img { filter: none !important; }

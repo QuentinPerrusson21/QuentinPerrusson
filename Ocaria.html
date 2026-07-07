@@ -6,7 +6,8 @@
     <title>Ocaria - Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
     <link rel="stylesheet" href="stylesheet.css">
-</head>
+
+    <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script></head>
 <body>
     <header class="header">
         <a href="index.html" class="back-btn">
@@ -30,7 +31,7 @@
                     <i class='bx bx-mobile-alt'></i>
                     Application Mobile
                 </span>
-                <span class="badge" style="background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.3); color: #fff;">
+                <span class="badge badge-neutral">
                     <i class='bx bx-buildings'></i>
                     Laeticia PIERRE EIRL
                 </span>
@@ -192,5 +193,7 @@
             </div>
         </section>
     </div>
-</body>
+
+    <button class="theme-toggle" aria-label="Changer de theme" title="Mode clair / sombre"><i class='bx bx-sun'></i></button>
+    <script src="theme.js"></script></body>
 </html>
