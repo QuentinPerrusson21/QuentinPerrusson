@@ -127,14 +127,14 @@
             <h2>Fonctionnalités développées</h2>
             <ul class="challenge-list">
                 <li class="challenge-item">
-                    <h3>🔐 Authentification</h3>
+                    <h3>Authentification</h3>
                     <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
                         <li>Connexion via <strong>Discord (OAuth2)</strong> en complément de la connexion e-mail / mot de passe (better-auth, configuration du provider côté serveur et sur le portail développeur Discord).</li>
                         <li>Flux de <strong>complétion du nom d'utilisateur</strong> après une première connexion Discord : détection des comptes sans username, redirection automatique vers un écran de saisie, formulaire validé (react-hook-form + zod) et mise à jour du profil.</li>
                     </ul>
                 </li>
                 <li class="challenge-item">
-                    <h3>📝 Publications &amp; images</h3>
+                    <h3>Publications &amp; images</h3>
                     <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
                         <li>Création de posts (texte + image) dans le fil d'actualité.</li>
                         <li>Upload d'images sur <strong>Cloudflare R2</strong> (stockage compatible S3).</li>
@@ -144,7 +144,7 @@
                     </ul>
                 </li>
                 <li class="challenge-item">
-                    <h3>🎭 Personnages (OC)</h3>
+                    <h3>Personnages (OC)</h3>
                     <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
                         <li>Association d'un ou plusieurs OC à un post — modélisation d'une relation <strong>many-to-many</strong> (table de liaison + migration).</li>
                         <li>Modale de sélection d'OC : liste des personnages, barre de recherche, cases à cocher (sélection multiple).</li>
@@ -153,7 +153,7 @@
                     </ul>
                 </li>
                 <li class="challenge-item">
-                    <h3>🗑️ Modération / gestion de contenu</h3>
+                    <h3>Modération / gestion de contenu</h3>
                     <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
                         <li>Suppression d'un post en <strong>soft delete</strong> (le post est masqué mais conservé en base).</li>
                         <li>Menu contextuel « … » avec fenêtre de confirmation et toast de confirmation.</li>
@@ -162,14 +162,14 @@
                     </ul>
                 </li>
                 <li class="challenge-item">
-                    <h3>🎨 Thèmes</h3>
+                    <h3>Thèmes</h3>
                     <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
                         <li>Affichage du « thème du moment » sur la page d'accueil.</li>
                         <li>Participation à un thème : lien post ↔ thème, page détail du thème et mention cliquable dans le fil <em>(en cours de finalisation)</em>.</li>
                     </ul>
                 </li>
                 <li class="challenge-item">
-                    <h3>🧩 Qualité &amp; composants réutilisables</h3>
+                    <h3>Qualité &amp; composants réutilisables</h3>
                     <ul style="padding-left: 20px; margin-top: 10px; color: #ddd; line-height: 1.7;">
                         <li>Extension du composant <code>Button</code> (ajout d'une prop <code>icon</code>).</li>
                         <li>Composant réutilisable <code>AddImageButton</code> (extrait pour éviter la duplication, suite à une revue de code).</li>
