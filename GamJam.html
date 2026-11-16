@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/icons.css">
     <link rel="stylesheet" href="stylesheet.css">    
 
-    <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light")document.documentElement.setAttribute("data-theme","light");}catch(e){}})();</script></head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+    <script>(function(){try{var t=localStorage.getItem("theme");if(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
+</head>
 <body>
     <header class="header">
         <a href="index.html" class="back-btn">

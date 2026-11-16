@@ -1,17 +1,153 @@
-*
-{
-    margin:  0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+/* ============================================================
+   FONDATIONS — tokens, typographie, éléments de base
+   Toutes les couleurs du site passent par ces variables.
+   Clair par défaut ; sombre via <html data-theme="dark"> (theme.js).
+   ============================================================ */
+:root {
+    color-scheme: light;
+
+    /* Couleurs */
+    --bg: #FAFAF9;
+    --surface: #FFFFFF;
+    --border: #E7E5E4;
+    --text: #1C1917;
+    --text-muted: #57534E;
+    --accent: #1D4ED8;
+    --accent-hover: #1E40AF;
+    --on-accent: #FFFFFF;          /* texte posé sur un fond accent */
+
+    /* Typographie */
+    --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+    --text-h1: clamp(2.125rem, 1.5rem + 3vw, 3rem);         /* 34 → 48px */
+    --text-h2: clamp(1.5rem, 1.35rem + 0.7vw, 1.75rem);     /* 24 → 28px */
+    --text-h3: 1.125rem;                                     /* 18px */
+    --text-body: clamp(1rem, 0.97rem + 0.15vw, 1.0625rem);  /* 16 → 17px */
+    --text-small: 0.875rem;                                  /* 14px */
+    --text-label: 0.8125rem;                                 /* 13px, labels mono */
+    --leading: 1.6;
+    --leading-tight: 1.15;
+
+    /* Formes, ombre, mouvement, mise en page */
+    --radius: 8px;
+    --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    --transition: 150ms ease;
+    --container: 1200px;
+    --gutter: clamp(1.25rem, 5vw, 2.5rem);
+    --section-gap: clamp(4rem, 10vw, 7rem);
 }
 
-body
-{
-    background: #0D0D0D;
-    color: #ededed;
-    min-height: 100vh;
+[data-theme="dark"] {
+    color-scheme: dark;
+
+    --bg: #0C0A09;
+    --surface: #1C1917;
+    --border: #292524;
+    --text: #F5F5F4;
+    --text-muted: #A8A29E;
+    --accent: #60A5FA;
+    --accent-hover: #93C5FD;
+    --on-accent: #0C0A09;
+    --shadow: none;
 }
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;      /* les ancres ne passent pas sous le header fixe */
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+}
+
+body {
+    min-height: 100vh;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans);
+    font-size: var(--text-body);
+    line-height: var(--leading);
+    -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+    font-weight: 600;
+    line-height: var(--leading-tight);
+    text-wrap: balance;
+}
+
+h1 {
+    font-size: var(--text-h1);
+    font-weight: 700;
+    letter-spacing: -0.025em;
+}
+
+h2 {
+    font-size: var(--text-h2);
+    letter-spacing: -0.015em;
+}
+
+h3 {
+    font-size: var(--text-h3);
+    line-height: 1.35;
+}
+
+a {
+    color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.2em;
+    transition: color var(--transition);
+}
+
+a:hover {
+    color: var(--accent-hover);
+}
+
+button, input, select, textarea {
+    font: inherit;
+    color: inherit;
+}
+
+/* Tags de stack et petits labels */
+code, kbd, .mono {
+    font-family: var(--font-mono);
+    font-size: var(--text-label);
+}
+
+:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+}
+
+::selection {
+    background: var(--accent);
+    color: var(--on-accent);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto !important;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* ============================================================
+   ANCIEN CSS — conservé tel quel pour l'étape 1,
+   entièrement remplacé à l'étape 2.
+   ============================================================ */
 
 .header
 {
@@ -1348,9 +1484,6 @@ body
         font-size: 16px;
     }
 }
-html {
-    scroll-behavior: smooth;
-}
 .info-value a {
     color: inherit;
     text-decoration: none;
@@ -1820,80 +1953,78 @@ html {
 /* ============================================================
    THEME CLAIR
    ============================================================ */
-[data-theme="light"] body { background: #f4f4f7; color: #1b1b28; }
+:root:not([data-theme="dark"]) .accueil { background: #f4f4f7; }
+:root:not([data-theme="dark"]) .about-section { background: #ececf0; }
+:root:not([data-theme="dark"]) .projet-back { background: #f4f4f7; }
+:root:not([data-theme="dark"]) .skills-section { background: #ececf0; border-top-color: rgba(133, 82, 242, 0.15); }
+:root:not([data-theme="dark"]) .footer { background: #e7e7ee; border-top-color: rgba(133, 82, 242, 0.2); }
 
-[data-theme="light"] .accueil { background: #f4f4f7; }
-[data-theme="light"] .about-section { background: #ececf0; }
-[data-theme="light"] .projet-back { background: #f4f4f7; }
-[data-theme="light"] .skills-section { background: #ececf0; border-top-color: rgba(133, 82, 242, 0.15); }
-[data-theme="light"] .footer { background: #e7e7ee; border-top-color: rgba(133, 82, 242, 0.2); }
-
-[data-theme="light"] .header {
+:root:not([data-theme="dark"]) .header {
     background: rgba(255, 255, 255, 0.85);
     border-bottom-color: rgba(133, 82, 242, 0.2);
     box-shadow: 0 4px 30px rgba(133, 82, 242, 0.1);
 }
-[data-theme="light"] .logo,
-[data-theme="light"] .footer-name {
+:root:not([data-theme="dark"]) .logo,
+:root:not([data-theme="dark"]) .footer-name {
     background: linear-gradient(135deg, #1b1b28, #8552F2);
     -webkit-background-clip: text;
     background-clip: text;
 }
-[data-theme="light"] .navbar a { color: #444; }
-[data-theme="light"] .navbar a:hover { color: #000; }
-[data-theme="light"] .menu-toggle span { background: #333; }
+:root:not([data-theme="dark"]) .navbar a { color: #444; }
+:root:not([data-theme="dark"]) .navbar a:hover { color: #000; }
+:root:not([data-theme="dark"]) .menu-toggle span { background: #333; }
 
-[data-theme="light"] .about-header h2,
-[data-theme="light"] .formation-item h4,
-[data-theme="light"] .info-value,
-[data-theme="light"] .no-projects p,
-[data-theme="light"] .challenge-item h3 { color: #1b1b28; }
+:root:not([data-theme="dark"]) .about-header h2,
+:root:not([data-theme="dark"]) .formation-item h4,
+:root:not([data-theme="dark"]) .info-value,
+:root:not([data-theme="dark"]) .no-projects p,
+:root:not([data-theme="dark"]) .challenge-item h3 { color: #1b1b28; }
 
-[data-theme="light"] .about-description,
-[data-theme="light"] .formation-school,
-[data-theme="light"] .project-tagline,
-[data-theme="light"] .footer-desc,
-[data-theme="light"] .skill-card span,
-[data-theme="light"] .project-section p { color: #55556a; }
+:root:not([data-theme="dark"]) .about-description,
+:root:not([data-theme="dark"]) .formation-school,
+:root:not([data-theme="dark"]) .project-tagline,
+:root:not([data-theme="dark"]) .footer-desc,
+:root:not([data-theme="dark"]) .skill-card span,
+:root:not([data-theme="dark"]) .project-section p { color: #55556a; }
 
-[data-theme="light"] .info-label { color: #77778c; }
-[data-theme="light"] .footer-copy { color: #8a8a99; }
+:root:not([data-theme="dark"]) .info-label { color: #77778c; }
+:root:not([data-theme="dark"]) .footer-copy { color: #8a8a99; }
 
-[data-theme="light"] .formation-box,
-[data-theme="light"] .skill-tag,
-[data-theme="light"] .info-card,
-[data-theme="light"] .project-section,
-[data-theme="light"] .challenge-item,
-[data-theme="light"] .skill-card {
+:root:not([data-theme="dark"]) .formation-box,
+:root:not([data-theme="dark"]) .skill-tag,
+:root:not([data-theme="dark"]) .info-card,
+:root:not([data-theme="dark"]) .project-section,
+:root:not([data-theme="dark"]) .challenge-item,
+:root:not([data-theme="dark"]) .skill-card {
     background: #ffffff;
     border-color: rgba(133, 82, 242, 0.22);
 }
-[data-theme="light"] .info-card:hover { background: #faf7ff; }
-[data-theme="light"] .skill-card:hover { background: #f3ecff; }
+:root:not([data-theme="dark"]) .info-card:hover { background: #faf7ff; }
+:root:not([data-theme="dark"]) .skill-card:hover { background: #f3ecff; }
 
-[data-theme="light"] .filter-btn { color: #8552F2; }
+:root:not([data-theme="dark"]) .filter-btn { color: #8552F2; }
 
-[data-theme="light"] .tech-item {
+:root:not([data-theme="dark"]) .tech-item {
     background: linear-gradient(135deg, rgba(133, 82, 242, 0.09), rgba(133, 82, 242, 0.04));
 }
-[data-theme="light"] .tech-item i { color: #8552F2; }
+:root:not([data-theme="dark"]) .tech-item i { color: #8552F2; }
 
-[data-theme="light"] .project-hero h1 {
+:root:not([data-theme="dark"]) .project-hero h1 {
     background: linear-gradient(135deg, #1b1b28, #8552F2);
     -webkit-background-clip: text;
     background-clip: text;
 }
 
-[data-theme="light"] .demo-container { background: #f0f0f5; }
+:root:not([data-theme="dark"]) .demo-container { background: #f0f0f5; }
 
 /* Textes definis en inline (color:#ddd) sur les pages projet : forcer en clair */
-[data-theme="light"] .challenge-item ul,
-[data-theme="light"] .challenge-item li,
-[data-theme="light"] .retrospective-box p,
-[data-theme="light"] .retrospective-box li { color: #44444f !important; }
+:root:not([data-theme="dark"]) .challenge-item ul,
+:root:not([data-theme="dark"]) .challenge-item li,
+:root:not([data-theme="dark"]) .retrospective-box p,
+:root:not([data-theme="dark"]) .retrospective-box li { color: #44444f !important; }
 
 @media (max-width: 768px) {
-    [data-theme="light"] .navbar { background: rgba(255, 255, 255, 0.97); }
+    :root:not([data-theme="dark"]) .navbar { background: rgba(255, 255, 255, 0.97); }
 }
 
 .badge-neutral {
@@ -1901,13 +2032,13 @@ html {
     border: 1px solid rgba(255, 255, 255, 0.3);
     color: #fff;
 }
-[data-theme="light"] .badge-neutral {
+:root:not([data-theme="dark"]) .badge-neutral {
     background: rgba(0, 0, 0, 0.05);
     border-color: rgba(0, 0, 0, 0.15);
     color: #333;
 }
 
-[data-theme="light"] .badge-github {
+:root:not([data-theme="dark"]) .badge-github {
     background: rgba(133, 82, 242, 0.08);
     border-color: #8552F2;
     color: #8552F2;
@@ -1915,4 +2046,4 @@ html {
 
 /* Logos SVG (simple-icons) inverses en blanc pour le sombre :
    en mode clair on retire l'inversion pour qu'ils restent visibles */
-[data-theme="light"] .tech-item img { filter: none !important; }
+:root:not([data-theme="dark"]) .tech-item img { filter: none !important; }
