@@ -33,8 +33,9 @@
         <section class="hero" id="top">
             <div class="container hero-inner">
                 <div class="hero-text">
+                    <p class="hero-hello">Bonjour, moi c'est</p>
                     <h1>Quentin Perrusson</h1>
-                    <p class="hero-role">Développeur full-stack en alternance — Nice / Sophia Antipolis</p>
+                    <p class="hero-role">Développeur <span class="mark">full-stack</span> en alternance — Nice / Sophia Antipolis</p>
                     <p class="hero-pitch">Étudiant en Bachelor 3 à l'IPSSI, je conçois des applications web et mobiles, de la base de données à l'interface.</p>
                     <div class="hero-actions">
                         <a class="btn btn-primary" href="#projets">Voir mes projets</a>
@@ -56,11 +57,14 @@
                         </ul>
                     </div>
                 </div>
-                <img class="hero-photo" src="image/pp.jpg" alt="Portrait illustré de Quentin Perrusson" width="1600" height="1066">
+                <figure class="hero-photo">
+                    <img src="image/pp.jpg" alt="Portrait illustré de Quentin Perrusson" width="1600" height="1066">
+                    <figcaption>Moi, en version dessinée.</figcaption>
+                </figure>
             </div>
         </section>
 
-        <section class="section" id="a-propos" aria-labelledby="titre-a-propos">
+        <section class="section section-band" id="a-propos" aria-labelledby="titre-a-propos">
             <div class="container">
                 <h2 id="titre-a-propos">À propos</h2>
                 <div class="about">
@@ -69,37 +73,35 @@
                         <p>Ce qui m'intéresse, c'est de comprendre un système en entier, de la base de données jusqu'à l'interface.</p>
                     </div>
 
-                    <div class="about-facts">
-                        <div>
-                            <h3 class="label">Formation</h3>
-                            <ul class="timeline">
-                                <li class="is-current">
-                                    <span class="timeline-title">Bachelor 3</span>
-                                    <span class="timeline-place">IPSSI Nice</span>
-                                    <span class="timeline-date">2026 – 2027</span>
-                                </li>
-                                <li>
-                                    <span class="timeline-title">Bachelor 2</span>
-                                    <span class="timeline-place">My Digital School Nice</span>
-                                    <span class="timeline-date">2024 – 2026</span>
-                                </li>
-                                <li>
-                                    <span class="timeline-title">Licence biologie moléculaire</span>
-                                    <span class="timeline-place">Université de Bourgogne</span>
-                                </li>
-                            </ul>
-                        </div>
+                    <div>
+                        <h3 class="label">Formation</h3>
+                        <ul class="timeline">
+                            <li class="is-current">
+                                <span class="timeline-title">Bachelor 3</span>
+                                <span class="timeline-place">IPSSI Nice</span>
+                                <span class="timeline-date">2026 – 2027</span>
+                            </li>
+                            <li>
+                                <span class="timeline-title">Bachelor 2</span>
+                                <span class="timeline-place">My Digital School Nice</span>
+                                <span class="timeline-date">2024 – 2026</span>
+                            </li>
+                            <li>
+                                <span class="timeline-title">Licence biologie moléculaire</span>
+                                <span class="timeline-place">Université de Bourgogne</span>
+                            </li>
+                        </ul>
+                    </div>
 
-                        <div>
-                            <h3 class="label">Infos</h3>
-                            <dl class="facts">
-                                <div><dt>Âge</dt><dd>23 ans</dd></div>
-                                <div><dt>Ville</dt><dd>Nice</dd></div>
-                                <div><dt>Permis</dt><dd>Permis B</dd></div>
-                                <div><dt>Langues</dt><dd>Français, anglais</dd></div>
-                                <div><dt>Statut</dt><dd>Disponible en alternance</dd></div>
-                            </dl>
-                        </div>
+                    <div>
+                        <h3 class="label">En bref</h3>
+                        <dl class="facts">
+                            <div><dt>Âge</dt><dd>23 ans</dd></div>
+                            <div><dt>Ville</dt><dd>Nice</dd></div>
+                            <div><dt>Permis</dt><dd>Permis B</dd></div>
+                            <div><dt>Langues</dt><dd>Français, anglais</dd></div>
+                            <div><dt>Statut</dt><dd>Disponible en alternance</dd></div>
+                        </dl>
                     </div>
                 </div>
             </div>
@@ -107,8 +109,8 @@
 
         <section class="section" id="projets" aria-labelledby="titre-projets">
             <div class="container">
-                <h2 id="titre-projets">Projets</h2>
-                <div class="projects">
+                <div class="section-head">
+                    <h2 id="titre-projets">Projets</h2>
                     <div class="filters" role="group" aria-label="Filtrer les projets par catégorie">
                         <button type="button" class="pill" data-filter="all" aria-pressed="true">Tous</button>
                         <button type="button" class="pill" data-filter="frontend" aria-pressed="false">Front-end</button>
@@ -116,144 +118,156 @@
                         <button type="button" class="pill" data-filter="fullstack" aria-pressed="false">Full-stack</button>
                         <button type="button" class="pill" data-filter="wordpress" aria-pressed="false">WordPress</button>
                     </div>
+                </div>
 
-                    <!-- Rempli par main.js quand un filtre ne renvoie aucun projet -->
-                    <p class="no-projects" role="status"></p>
+                <!-- Rempli par main.js quand un filtre ne renvoie aucun projet -->
+                <p class="no-projects" role="status"></p>
 
-                    <div class="project-group">
-                        <h3 class="label">Mis en avant</h3>
-                        <div class="featured-list">
+                <div class="project-group">
+                    <h3 class="visually-hidden">Mis en avant</h3>
+                    <div class="featured-list">
 
-                            <article class="project project-featured" data-category="fullstack">
-                                <!-- TODO : remplacer par une capture de l'application Ocaria -->
-                                <div class="project-media project-media-placeholder" aria-hidden="true">Ocaria</div>
-                                <div class="project-body">
-                                    <h4 class="project-title"><a href="Ocaria.html">Ocaria</a></h4>
-                                    <p class="project-desc">Application mobile communautaire pour les créateurs de personnages originaux, développée en stage : connexion Discord, publications avec images, fil d'actualité paginé.</p>
-                                    <ul class="tags" aria-label="Stack">
-                                        <li class="tag">React Native</li>
-                                        <li class="tag">TypeScript</li>
-                                        <li class="tag">NestJS</li>
-                                        <li class="tag">GraphQL</li>
-                                        <li class="tag">Prisma</li>
-                                        <li class="tag">PostgreSQL</li>
-                                    </ul>
-                                    <span class="project-more" aria-hidden="true">Voir le projet <i class="bx bx-right-arrow-alt"></i></span>
-                                </div>
-                            </article>
+                        <!-- TODO : dès qu'une capture de l'application existe, remplacer le bloc
+                             .feature-notes par <div class="project-media"><img …></div> placé avant .feature-body -->
+                        <article class="project feature feature-text" data-category="fullstack">
+                            <div class="feature-body">
+                                <p class="feature-meta">Stage · 2 mois</p>
+                                <h4 class="project-title"><a href="Ocaria.html">Ocaria</a></h4>
+                                <p class="project-desc">Pendant mon stage, j'ai développé plusieurs fonctionnalités de cette application mobile destinée aux créateurs de personnages originaux, du back-end à l'interface.</p>
+                                <ul class="tags" aria-label="Stack">
+                                    <li class="tag">React Native</li>
+                                    <li class="tag">TypeScript</li>
+                                    <li class="tag">NestJS</li>
+                                    <li class="tag">GraphQL</li>
+                                    <li class="tag">Prisma</li>
+                                    <li class="tag">PostgreSQL</li>
+                                </ul>
+                                <span class="project-more" aria-hidden="true">Voir le projet <i class="bx bx-right-arrow-alt"></i></span>
+                            </div>
+                            <div class="feature-notes">
+                                <p class="feature-notes-title">Ce que j'y ai développé</p>
+                                <ul>
+                                    <li>La connexion avec Discord (OAuth2) et la complétion du profil</li>
+                                    <li>Les publications avec images, stockées sur Cloudflare R2</li>
+                                    <li>Le fil d'actualité paginé</li>
+                                    <li>L'association de personnages aux publications (relation many-to-many)</li>
+                                </ul>
+                            </div>
+                        </article>
 
-                            <article class="project project-featured" data-category="wordpress">
-                                <img class="project-media" src="image/clement.jpg" alt="Page d'accueil du site de Clément Lesaffre" width="1600" height="950" loading="lazy" decoding="async">
-                                <div class="project-body">
-                                    <h4 class="project-title"><a href="ClementLesaffre.html">Site Clément Lesaffre</a></h4>
-                                    <p class="project-desc">Refonte complète du site d'un artiste, pour un client réel : migration vers WordPress, CSS sur-mesure pour le mobile et score SEO de 92/100.</p>
-                                    <ul class="tags" aria-label="Stack">
-                                        <li class="tag">WordPress</li>
-                                        <li class="tag">Elementor Pro</li>
-                                        <li class="tag">CSS</li>
-                                        <li class="tag">JavaScript</li>
-                                    </ul>
-                                    <span class="project-more" aria-hidden="true">Voir le projet <i class="bx bx-right-arrow-alt"></i></span>
-                                </div>
-                            </article>
+                        <article class="project feature" data-category="wordpress">
+                            <div class="project-media"><img src="image/clement.jpg" alt="Page d'accueil du site de Clément Lesaffre" width="1600" height="950" loading="lazy" decoding="async"></div>
+                            <div class="feature-body">
+                                <p class="feature-meta">Client réel · 9 mois</p>
+                                <h4 class="project-title"><a href="ClementLesaffre.html">Site Clément Lesaffre</a></h4>
+                                <p class="project-desc">J'ai refait entièrement le site d'un artiste, pour un vrai client : migration vers WordPress, CSS sur-mesure pour le mobile et score SEO de 92/100. Il gère aujourd'hui son site seul.</p>
+                                <ul class="tags" aria-label="Stack">
+                                    <li class="tag">WordPress</li>
+                                    <li class="tag">Elementor Pro</li>
+                                    <li class="tag">CSS</li>
+                                    <li class="tag">JavaScript</li>
+                                </ul>
+                                <span class="project-more" aria-hidden="true">Voir le projet <i class="bx bx-right-arrow-alt"></i></span>
+                            </div>
+                        </article>
 
-                            <article class="project project-featured" data-category="fullstack">
-                                <img class="project-media" src="image/TIKR.png" alt="Page d'accueil de la billetterie TIKR" width="3024" height="1964" loading="lazy" decoding="async">
-                                <div class="project-body">
-                                    <h4 class="project-title"><a href="TIKR.html">TIKR</a></h4>
-                                    <p class="project-desc">Billetterie en ligne pour concerts et spectacles : réservation transactionnelle, billets PDF avec QR code et back-office d'administration.</p>
-                                    <ul class="tags" aria-label="Stack">
-                                        <li class="tag">PHP 8</li>
-                                        <li class="tag">MySQL</li>
-                                        <li class="tag">Tailwind CSS</li>
-                                        <li class="tag">JavaScript</li>
-                                    </ul>
-                                    <span class="project-more" aria-hidden="true">Voir le projet <i class="bx bx-right-arrow-alt"></i></span>
-                                </div>
-                            </article>
+                        <article class="project feature feature-flip" data-category="fullstack">
+                            <div class="project-media"><img src="image/TIKR.png" alt="Page d'accueil de la billetterie TIKR" width="3024" height="1964" loading="lazy" decoding="async"></div>
+                            <div class="feature-body">
+                                <p class="feature-meta">Projet individuel · 35 heures</p>
+                                <h4 class="project-title"><a href="TIKR.html">TIKR</a></h4>
+                                <p class="project-desc">Une billetterie en ligne pour concerts et spectacles, que j'ai conçue et développée seul : réservation transactionnelle, billets PDF avec QR code et back-office d'administration.</p>
+                                <ul class="tags" aria-label="Stack">
+                                    <li class="tag">PHP 8</li>
+                                    <li class="tag">MySQL</li>
+                                    <li class="tag">Tailwind CSS</li>
+                                    <li class="tag">JavaScript</li>
+                                </ul>
+                                <span class="project-more" aria-hidden="true">Voir le projet <i class="bx bx-right-arrow-alt"></i></span>
+                            </div>
+                        </article>
 
-                        </div>
                     </div>
+                </div>
 
-                    <div class="project-group">
-                        <h3 class="label">Autres projets</h3>
-                        <div class="project-grid">
+                <div class="project-group">
+                    <h3 class="group-title">Autres projets</h3>
+                    <div class="project-list">
 
-                            <article class="project project-compact" data-category="fullstack">
-                                <img class="project-media" src="image/carte de visite hopheis.jpg" alt="Cartes de visite de la bijouterie Hopheis" width="1600" height="1200" loading="lazy" decoding="async">
-                                <div class="project-body">
-                                    <h4 class="project-title"><a href="ProjetHopheis.html">Hopheis</a></h4>
-                                    <p class="project-desc">Site e-commerce d'une bijouterie fictive, réalisé en première année.</p>
-                                    <ul class="tags" aria-label="Stack">
-                                        <li class="tag">PHP</li>
-                                        <li class="tag">MySQL</li>
-                                        <li class="tag">JavaScript</li>
-                                    </ul>
-                                </div>
-                            </article>
+                        <article class="project project-row" data-category="fullstack">
+                            <div class="project-media"><img src="image/carte de visite hopheis.jpg" alt="Cartes de visite de la bijouterie Hopheis" width="1600" height="1200" loading="lazy" decoding="async"></div>
+                            <div class="row-body">
+                                <h4 class="project-title"><a href="ProjetHopheis.html">Hopheis</a></h4>
+                                <p class="project-desc">Site e-commerce d'une bijouterie fictive, réalisé en première année.</p>
+                            </div>
+                            <ul class="tags" aria-label="Stack">
+                                <li class="tag">PHP</li>
+                                <li class="tag">MySQL</li>
+                                <li class="tag">JavaScript</li>
+                            </ul>
+                        </article>
 
-                            <article class="project project-compact" data-category="fullstack">
-                                <img class="project-media" src="image/braise.jpg" alt="Page d'accueil du site Braise" width="1600" height="877" loading="lazy" decoding="async">
-                                <div class="project-body">
-                                    <h4 class="project-title"><a href="Braise.html">Braise</a></h4>
-                                    <p class="project-desc">Site vitrine d'un restaurant fictif, avec système de réservation.</p>
-                                    <ul class="tags" aria-label="Stack">
-                                        <li class="tag">PHP</li>
-                                        <li class="tag">JavaScript</li>
-                                        <li class="tag">HTML / CSS</li>
-                                    </ul>
-                                </div>
-                            </article>
+                        <article class="project project-row" data-category="fullstack">
+                            <div class="project-media"><img src="image/braise.jpg" alt="Page d'accueil du site Braise" width="1600" height="877" loading="lazy" decoding="async"></div>
+                            <div class="row-body">
+                                <h4 class="project-title"><a href="Braise.html">Braise</a></h4>
+                                <p class="project-desc">Site vitrine d'un restaurant fictif, avec système de réservation.</p>
+                            </div>
+                            <ul class="tags" aria-label="Stack">
+                                <li class="tag">PHP</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">HTML / CSS</li>
+                            </ul>
+                        </article>
 
-                            <article class="project project-compact" data-category="frontend">
-                                <img class="project-media" src="image/Dae Jang.png" alt="Visuel du restaurant Dae Jang" width="784" height="514" loading="lazy" decoding="async">
-                                <div class="project-body">
-                                    <h4 class="project-title"><a href="DaeJang.html">Dae Jang</a></h4>
-                                    <p class="project-desc">Site vitrine d'un restaurant coréen, intégré avec Bootstrap.</p>
-                                    <ul class="tags" aria-label="Stack">
-                                        <li class="tag">HTML / CSS</li>
-                                        <li class="tag">Bootstrap</li>
-                                        <li class="tag">JavaScript</li>
-                                    </ul>
-                                </div>
-                            </article>
+                        <article class="project project-row" data-category="frontend">
+                            <div class="project-media"><img src="image/Dae Jang.png" alt="Visuel du restaurant Dae Jang" width="784" height="514" loading="lazy" decoding="async"></div>
+                            <div class="row-body">
+                                <h4 class="project-title"><a href="DaeJang.html">Dae Jang</a></h4>
+                                <p class="project-desc">Site vitrine d'un restaurant coréen, intégré avec Bootstrap.</p>
+                            </div>
+                            <ul class="tags" aria-label="Stack">
+                                <li class="tag">HTML / CSS</li>
+                                <li class="tag">Bootstrap</li>
+                                <li class="tag">JavaScript</li>
+                            </ul>
+                        </article>
 
-                            <article class="project project-compact" data-category="frontend">
-                                <img class="project-media" src="image/arcade.jpg" alt="Visuel « Arcade Archive » du site de jeux rétro" width="1600" height="872" loading="lazy" decoding="async">
-                                <div class="project-body">
-                                    <h4 class="project-title"><a href="Retro.html">Jeux rétro</a></h4>
-                                    <p class="project-desc">Site regroupant plusieurs jeux rétro : Pacman, Snake…</p>
-                                    <ul class="tags" aria-label="Stack">
-                                        <li class="tag">HTML / CSS</li>
-                                        <li class="tag">JavaScript</li>
-                                    </ul>
-                                </div>
-                            </article>
+                        <article class="project project-row" data-category="frontend">
+                            <div class="project-media"><img src="image/arcade.jpg" alt="Visuel « Arcade Archive » du site de jeux rétro" width="1600" height="872" loading="lazy" decoding="async"></div>
+                            <div class="row-body">
+                                <h4 class="project-title"><a href="Retro.html">Jeux rétro</a></h4>
+                                <p class="project-desc">Site regroupant plusieurs jeux rétro : Pacman, Snake…</p>
+                            </div>
+                            <ul class="tags" aria-label="Stack">
+                                <li class="tag">HTML / CSS</li>
+                                <li class="tag">JavaScript</li>
+                            </ul>
+                        </article>
 
-                            <article class="project project-compact" data-category="frontend">
-                                <img class="project-media" src="image/GameJam.jpg" alt="Écran titre du jeu réalisé en game jam" width="1600" height="902" loading="lazy" decoding="async">
-                                <div class="project-body">
-                                    <h4 class="project-title"><a href="GamJam.html">Forge in the Fridge</a></h4>
-                                    <p class="project-desc">Jeu de type survivors-like créé sur Godot lors d'une game jam.</p>
-                                    <ul class="tags" aria-label="Stack">
-                                        <li class="tag">Godot 4</li>
-                                        <li class="tag">GDScript</li>
-                                    </ul>
-                                </div>
-                            </article>
+                        <article class="project project-row" data-category="frontend">
+                            <div class="project-media"><img src="image/GameJam.jpg" alt="Écran titre du jeu réalisé en game jam" width="1600" height="902" loading="lazy" decoding="async"></div>
+                            <div class="row-body">
+                                <h4 class="project-title"><a href="GamJam.html">Forge in the Fridge</a></h4>
+                                <p class="project-desc">Jeu de type survivors-like créé sur Godot lors d'une game jam.</p>
+                            </div>
+                            <ul class="tags" aria-label="Stack">
+                                <li class="tag">Godot 4</li>
+                                <li class="tag">GDScript</li>
+                            </ul>
+                        </article>
 
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="section" id="competences" aria-labelledby="titre-competences">
+        <section class="section section-band" id="competences" aria-labelledby="titre-competences">
             <div class="container">
                 <h2 id="titre-competences">Compétences</h2>
                 <dl class="skills">
                     <div class="skills-row">
-                        <dt class="label">Front</dt>
+                        <dt>Front</dt>
                         <dd>
                             <ul class="tags">
                                 <li class="tag">HTML</li>
@@ -267,7 +281,7 @@
                         </dd>
                     </div>
                     <div class="skills-row">
-                        <dt class="label">Back</dt>
+                        <dt>Back</dt>
                         <dd>
                             <ul class="tags">
                                 <li class="tag">PHP</li>
@@ -278,7 +292,7 @@
                         </dd>
                     </div>
                     <div class="skills-row">
-                        <dt class="label">Données</dt>
+                        <dt>Données</dt>
                         <dd>
                             <ul class="tags">
                                 <li class="tag">PostgreSQL</li>
@@ -287,7 +301,7 @@
                         </dd>
                     </div>
                     <div class="skills-row">
-                        <dt class="label">Outils</dt>
+                        <dt>Outils</dt>
                         <dd>
                             <ul class="tags">
                                 <li class="tag">Git</li>
@@ -304,29 +318,22 @@
         <section class="section" id="contact" aria-labelledby="titre-contact">
             <div class="container">
                 <h2 id="titre-contact">Contact</h2>
-                <div class="contact">
-                    <p class="contact-lead">Je recherche une alternance en développement web — Nice / Sophia Antipolis.</p>
-                    <ul class="contact-links">
-                        <li>
-                            <a href="mailto:quentinperrusson017@gmail.com">
-                                <i class="bx bx-envelope" aria-hidden="true"></i>
-                                <span>quentinperrusson017@gmail.com</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/in/quentin-perrusson/" target="_blank" rel="noopener">
-                                <i class="bx bxl-linkedin-square" aria-hidden="true"></i>
-                                <span>LinkedIn</span>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/QuentinPerrusson21" target="_blank" rel="noopener">
-                                <i class="bx bxl-github" aria-hidden="true"></i>
-                                <span>GitHub</span>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
+                <p class="contact-lead">Je recherche une alternance en développement web — Nice / Sophia Antipolis.</p>
+                <p class="contact-email"><a href="mailto:quentinperrusson017@gmail.com">quentinperrusson017@gmail.com</a></p>
+                <ul class="contact-links">
+                    <li>
+                        <a href="https://www.linkedin.com/in/quentin-perrusson/" target="_blank" rel="noopener">
+                            <i class="bx bxl-linkedin-square" aria-hidden="true"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/QuentinPerrusson21" target="_blank" rel="noopener">
+                            <i class="bx bxl-github" aria-hidden="true"></i>
+                            <span>GitHub</span>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </section>
 
