@@ -1,323 +1,341 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="stylesheet.css">
-    <link href='https://cdn.boxicons.com/fonts/brands/boxicons-brands.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-
+    <title>Quentin Perrusson — Développeur full-stack en alternance</title>
+    <meta name="description" content="Portfolio de Quentin Perrusson, développeur full-stack en alternance à Nice / Sophia Antipolis : projets React Native, NestJS, PHP et WordPress.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <script>(function(){try{var t=localStorage.getItem("theme");if(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
 </head>
 <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
     <header class="header">
-        <a href="#" class="logo">Portfolio</a>
-
-        <div class="menu-toggle" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-
-        <nav class="navbar">
-            <a href="#" style="--i:1" class="active" onclick="closeMenu()">Accueil </a>
-            <a href="#Propos" style="--i:2" onclick="closeMenu()">À propos</a>
-            <a href="#portfolio" style="--i:3" onclick="closeMenu()">Portfolio</a>
-            <a href="#contact" style="--i:4" onclick="closeMenu()">Contact</a>
-
-
+        <a class="brand" href="#top">Quentin Perrusson</a>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="#a-propos">À propos</a>
+            <a href="#projets">Projets</a>
+            <a href="#competences">Compétences</a>
+            <a href="#contact">Contact</a>
         </nav>
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+            <i class="bx bx-moon" aria-hidden="true"></i>
+        </button>
     </header>
-    <section class="accueil">
-        <canvas class="particles-canvas" aria-hidden="true"></canvas>
-        <div class="accueil-content">
-            <h3>Bonjour, moi c'est</h3>
-            <h1>Quentin Perrusson</h1>
-            <h3>Parcours d'études <span class="texte"></span></h3>
-            <p>Je suis un étudiant en 2ème année à la recherche d'une alternance pour devenir développeur full-stack</p>
-            <div class="accueil-sci">
-                <a href="https://www.linkedin.com/in/quentin-perrusson/" target="_blank" style="--i:7"><i class='bxl bx-linkedin-square'></i></a>
-                <a href="https://github.com/QuentinPerrusson21" target="_blank" style="--i:8"><i class='bxl bx-github'></i></a>
-            </div>
-            <a href="image/CVQuentinB2.pdf" target="_blank" class="cv-download-link">
-                <i class="bx bxs-download"></i>
-                Regarder mon CV
-            </a><br><br>
-            <a href="#Propos" class="btn-box">Si vous souhaitez en savoir plus</a>
-        </div>
 
-        <div class="accueil-img">
-            <img src="image/pp.jpg" alt="Quentin Perrusson">
-        </div>
-    </section>
-    <section class="About">
-        <div class="about-container" id="Propos">
-            <div class="about-header" >
-                <span class="about-tag">À PROPOS DE MOI</span>
-                <h2>Étudiant en<br><span class="gradient-text">Full-stack</span></h2>
-            </div>
+    <main id="contenu">
 
-            <div class="about-content">
-                <div class="about-left">
-                    <p class="about-description">
-                        J'ai commencé mon parcours universitaire par une licence en biologie à l'Université de Bourgogne, cependant j'ai découvert que cela ne me plaisait pas.
-                    </p>
-                    <p class="about-description">
-                        Étudiant passionné en Bachelor Informatique à MyDigitalSchool, je me spécialise dans le développement Full-stack. Basé à Nice, je recherche une alternance pour ma 3ème année afin d'approfondir mes compétences en entreprise.
-                    </p>
-
-                    <p class="about-description">
-                        Autodidacte et curieux, je construis des projets concrets pour apprendre : de l'e-commerce PHP à une application mobile React Native en production. J'aime comprendre comment les choses fonctionnent de la base de données jusqu'à l'interface.
-                    </p>
-
-                    <div class="formation-box">
-                        <h3> Formation</h3>
-
-                        <div class="formation-item">
-                            <h4>Bachelor Informatique</h4>
-                            <p class="formation-school">MyDigitalSchool</p>
-                            <p class="formation-year">2024 - 2027</p>
-                        </div>
-
-                        <div class="formation-item">
-                            <h4>Licence Biologie</h4>
-                            <p class="formation-school">Université de Bourgogne</p>
-                        </div>
+        <section class="hero" id="top">
+            <div class="container hero-inner">
+                <div class="hero-text">
+                    <h1>Quentin Perrusson</h1>
+                    <p class="hero-role">Développeur full-stack en alternance — Nice / Sophia Antipolis</p>
+                    <p class="hero-pitch">Étudiant en Bachelor 3 à l'IPSSI, je conçois des applications web et mobiles, de la base de données à l'interface.</p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary" href="#projets">Voir mes projets</a>
+                        <a class="btn btn-secondary" href="image/CVQuentinB2.pdf" download="CV-Quentin-Perrusson.pdf">
+                            <i class="bx bx-download" aria-hidden="true"></i>
+                            Télécharger mon CV
+                        </a>
+                        <ul class="social">
+                            <li>
+                                <a href="https://github.com/QuentinPerrusson21" target="_blank" rel="noopener" aria-label="GitHub (nouvel onglet)">
+                                    <i class="bx bxl-github" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/in/quentin-perrusson/" target="_blank" rel="noopener" aria-label="LinkedIn (nouvel onglet)">
+                                    <i class="bx bxl-linkedin-square" aria-hidden="true"></i>
+                                </a>
+                            </li>
+                        </ul>
                     </div>
                 </div>
+                <img class="hero-photo" src="image/pp.jpg" alt="Portrait illustré de Quentin Perrusson" width="1600" height="1066">
+            </div>
+        </section>
 
-                <div class="about-right">
-                    <div class="info-grid">
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class='bx bx-user'></i>
-                            </div>
-                            <div class="info-content">
-                                <p class="info-label">Nom</p>
-                                <p class="info-value">Quentin Perrusson</p>
-                            </div>
-                        </div>
+        <section class="section" id="a-propos" aria-labelledby="titre-a-propos">
+            <div class="container">
+                <h2 id="titre-a-propos">À propos</h2>
+                <div class="about">
+                    <div class="about-text">
+                        <p>Après des études de biologie moléculaire à l'Université de Bourgogne, je me suis reconverti dans le développement web. Autodidacte et curieux, j'apprends en construisant des projets concrets, d'un site e-commerce en PHP à une application mobile React Native développée en stage.</p>
+                        <p>Ce qui m'intéresse, c'est de comprendre un système en entier, de la base de données jusqu'à l'interface.</p>
+                    </div>
 
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class='bx bx-calendar'></i>
-                            </div>
-                            <div class="info-content">
-                                <p class="info-label">Âge</p>
-                                <p class="info-value">22 ans</p>
-                            </div>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class='bx bx-map'></i>
-                            </div>
-                            <div class="info-content">
-                                <p class="info-label">Localisation</p>
-                                <p class="info-value">Nice, France</p>
-                            </div>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class='bx bx-envelope'></i>
-                            </div>
-                            <div class="info-content">
-                                <p class="info-label">Email</p>
-                                <p class="info-value"><a href="mailto:quentinperrusson017@gmail.com">quentinperrusson017@gmail.com</a></p>
-                            </div>
+                    <div class="about-facts">
+                        <div>
+                            <h3 class="label">Formation</h3>
+                            <ul class="timeline">
+                                <li class="is-current">
+                                    <span class="timeline-title">Bachelor 3</span>
+                                    <span class="timeline-place">IPSSI Nice</span>
+                                    <span class="timeline-date">2026 – 2027</span>
+                                </li>
+                                <li>
+                                    <span class="timeline-title">Bachelor 2</span>
+                                    <span class="timeline-place">My Digital School Nice</span>
+                                    <span class="timeline-date">2024 – 2026</span>
+                                </li>
+                                <li>
+                                    <span class="timeline-title">Licence biologie moléculaire</span>
+                                    <span class="timeline-place">Université de Bourgogne</span>
+                                </li>
+                            </ul>
                         </div>
 
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class='bx bx-phone'></i>
-                            </div>
-                            <div class="info-content">
-                                <p class="info-label">Téléphone</p>
-                                <p class="info-value">06 45 86 49 73</p>
-                            </div>
-                        </div>
-
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class='bx bx-world'></i>
-                            </div>
-                            <div class="info-content">
-                                <p class="info-label">Langues</p>
-                                <p class="info-value">Français, Anglais</p>
-                            </div>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class='bx bx-car'></i>
-                            </div>
-                            <div class="info-content">
-                                <p class="info-label">Permis</p>
-                                <p class="info-value">Permis B</p>
-                            </div>
-                        </div>
-                        <div class="info-card">
-                            <div class="info-icon">
-                                <i class='bx bx-briefcase'></i>
-                            </div>
-                            <div class="info-content">
-                                <p class="info-label">Disponibilité</p>
-                                <p class="info-value">Alternance 3ème année</p>
-                            </div>
+                        <div>
+                            <h3 class="label">Infos</h3>
+                            <dl class="facts">
+                                <div><dt>Âge</dt><dd>23 ans</dd></div>
+                                <div><dt>Ville</dt><dd>Nice</dd></div>
+                                <div><dt>Permis</dt><dd>Permis B</dd></div>
+                                <div><dt>Langues</dt><dd>Français, anglais</dd></div>
+                                <div><dt>Statut</dt><dd>Disponible en alternance</dd></div>
+                            </dl>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="projet-back">
-        <div id="portfolio">
-            <div class="main-text">
-                <h2>Derniers<span> Projets</span></h2>
-                <br>
+        </section>
 
-                <div class="filter-buttons">
-                    <button class="filter-btn active" data-filter="all">Tous</button>
-                    <button class="filter-btn" data-filter="frontend">Front-end</button>
-                    <button class="filter-btn" data-filter="backend">Back-end</button>
-                    <button class="filter-btn" data-filter="fullstack">Full-stack</button>
-                    <button class="filter-btn" data-filter="Wordpress">Wordpress</button>
+        <section class="section" id="projets" aria-labelledby="titre-projets">
+            <div class="container">
+                <h2 id="titre-projets">Projets</h2>
+                <div class="projects">
+                    <div class="filters" role="group" aria-label="Filtrer les projets par catégorie">
+                        <button type="button" class="pill" data-filter="all" aria-pressed="true">Tous</button>
+                        <button type="button" class="pill" data-filter="frontend" aria-pressed="false">Front-end</button>
+                        <button type="button" class="pill" data-filter="backend" aria-pressed="false">Back-end</button>
+                        <button type="button" class="pill" data-filter="fullstack" aria-pressed="false">Full-stack</button>
+                        <button type="button" class="pill" data-filter="wordpress" aria-pressed="false">WordPress</button>
+                    </div>
+
+                    <!-- Rempli par main.js quand un filtre ne renvoie aucun projet -->
+                    <p class="no-projects" role="status"></p>
+
+                    <div class="project-group">
+                        <h3 class="label">Mis en avant</h3>
+                        <div class="featured-list">
+
+                            <article class="project project-featured" data-category="fullstack">
+                                <!-- TODO : remplacer par une capture de l'application Ocaria -->
+                                <div class="project-media project-media-placeholder" aria-hidden="true">Ocaria</div>
+                                <div class="project-body">
+                                    <h4 class="project-title"><a href="Ocaria.html">Ocaria</a></h4>
+                                    <p class="project-desc">Application mobile communautaire pour les créateurs de personnages originaux, développée en stage : connexion Discord, publications avec images, fil d'actualité paginé.</p>
+                                    <ul class="tags" aria-label="Stack">
+                                        <li class="tag">React Native</li>
+                                        <li class="tag">TypeScript</li>
+                                        <li class="tag">NestJS</li>
+                                        <li class="tag">GraphQL</li>
+                                        <li class="tag">Prisma</li>
+                                        <li class="tag">PostgreSQL</li>
+                                    </ul>
+                                    <span class="project-more" aria-hidden="true">Voir le projet <i class="bx bx-right-arrow-alt"></i></span>
+                                </div>
+                            </article>
+
+                            <article class="project project-featured" data-category="wordpress">
+                                <img class="project-media" src="image/clement.jpg" alt="Page d'accueil du site de Clément Lesaffre" width="1600" height="950" loading="lazy" decoding="async">
+                                <div class="project-body">
+                                    <h4 class="project-title"><a href="ClementLesaffre.html">Site Clément Lesaffre</a></h4>
+                                    <p class="project-desc">Refonte complète du site d'un artiste, pour un client réel : migration vers WordPress, CSS sur-mesure pour le mobile et score SEO de 92/100.</p>
+                                    <ul class="tags" aria-label="Stack">
+                                        <li class="tag">WordPress</li>
+                                        <li class="tag">Elementor Pro</li>
+                                        <li class="tag">CSS</li>
+                                        <li class="tag">JavaScript</li>
+                                    </ul>
+                                    <span class="project-more" aria-hidden="true">Voir le projet <i class="bx bx-right-arrow-alt"></i></span>
+                                </div>
+                            </article>
+
+                            <article class="project project-featured" data-category="fullstack">
+                                <img class="project-media" src="image/TIKR.png" alt="Page d'accueil de la billetterie TIKR" width="3024" height="1964" loading="lazy" decoding="async">
+                                <div class="project-body">
+                                    <h4 class="project-title"><a href="TIKR.html">TIKR</a></h4>
+                                    <p class="project-desc">Billetterie en ligne pour concerts et spectacles : réservation transactionnelle, billets PDF avec QR code et back-office d'administration.</p>
+                                    <ul class="tags" aria-label="Stack">
+                                        <li class="tag">PHP 8</li>
+                                        <li class="tag">MySQL</li>
+                                        <li class="tag">Tailwind CSS</li>
+                                        <li class="tag">JavaScript</li>
+                                    </ul>
+                                    <span class="project-more" aria-hidden="true">Voir le projet <i class="bx bx-right-arrow-alt"></i></span>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
+
+                    <div class="project-group">
+                        <h3 class="label">Autres projets</h3>
+                        <div class="project-grid">
+
+                            <article class="project project-compact" data-category="fullstack">
+                                <img class="project-media" src="image/carte de visite hopheis.jpg" alt="Cartes de visite de la bijouterie Hopheis" width="1600" height="1200" loading="lazy" decoding="async">
+                                <div class="project-body">
+                                    <h4 class="project-title"><a href="ProjetHopheis.html">Hopheis</a></h4>
+                                    <p class="project-desc">Site e-commerce d'une bijouterie fictive, réalisé en première année.</p>
+                                    <ul class="tags" aria-label="Stack">
+                                        <li class="tag">PHP</li>
+                                        <li class="tag">MySQL</li>
+                                        <li class="tag">JavaScript</li>
+                                    </ul>
+                                </div>
+                            </article>
+
+                            <article class="project project-compact" data-category="fullstack">
+                                <img class="project-media" src="image/braise.jpg" alt="Page d'accueil du site Braise" width="1600" height="877" loading="lazy" decoding="async">
+                                <div class="project-body">
+                                    <h4 class="project-title"><a href="Braise.html">Braise</a></h4>
+                                    <p class="project-desc">Site vitrine d'un restaurant fictif, avec système de réservation.</p>
+                                    <ul class="tags" aria-label="Stack">
+                                        <li class="tag">PHP</li>
+                                        <li class="tag">JavaScript</li>
+                                        <li class="tag">HTML / CSS</li>
+                                    </ul>
+                                </div>
+                            </article>
+
+                            <article class="project project-compact" data-category="frontend">
+                                <img class="project-media" src="image/Dae Jang.png" alt="Visuel du restaurant Dae Jang" width="784" height="514" loading="lazy" decoding="async">
+                                <div class="project-body">
+                                    <h4 class="project-title"><a href="DaeJang.html">Dae Jang</a></h4>
+                                    <p class="project-desc">Site vitrine d'un restaurant coréen, intégré avec Bootstrap.</p>
+                                    <ul class="tags" aria-label="Stack">
+                                        <li class="tag">HTML / CSS</li>
+                                        <li class="tag">Bootstrap</li>
+                                        <li class="tag">JavaScript</li>
+                                    </ul>
+                                </div>
+                            </article>
+
+                            <article class="project project-compact" data-category="frontend">
+                                <img class="project-media" src="image/arcade.jpg" alt="Visuel « Arcade Archive » du site de jeux rétro" width="1600" height="872" loading="lazy" decoding="async">
+                                <div class="project-body">
+                                    <h4 class="project-title"><a href="Retro.html">Jeux rétro</a></h4>
+                                    <p class="project-desc">Site regroupant plusieurs jeux rétro : Pacman, Snake…</p>
+                                    <ul class="tags" aria-label="Stack">
+                                        <li class="tag">HTML / CSS</li>
+                                        <li class="tag">JavaScript</li>
+                                    </ul>
+                                </div>
+                            </article>
+
+                            <article class="project project-compact" data-category="frontend">
+                                <img class="project-media" src="image/GameJam.jpg" alt="Écran titre du jeu réalisé en game jam" width="1600" height="902" loading="lazy" decoding="async">
+                                <div class="project-body">
+                                    <h4 class="project-title"><a href="GamJam.html">Forge in the Fridge</a></h4>
+                                    <p class="project-desc">Jeu de type survivors-like créé sur Godot lors d'une game jam.</p>
+                                    <ul class="tags" aria-label="Stack">
+                                        <li class="tag">Godot 4</li>
+                                        <li class="tag">GDScript</li>
+                                    </ul>
+                                </div>
+                            </article>
+
+                        </div>
+                    </div>
                 </div>
-                <div class="portfolio-content">
-                    <div class="no-projects" style="display: none;">
-                        <p>Il n'y a pas de projet <span class="filter-name"></span> pour le moment.</p>
-                    </div>
+            </div>
+        </section>
 
-                    <div class="row" data-category="fullstack">
-                        <img src="image/carte de visite hopheis.jpg" alt="carte de visite  Hopheis" loading="lazy" decoding="async">
-                        <div class="layer">
-                            <h5>Projet Hopheis</h5>
-                            <p>J'ai réalisé un site e-commerce d'une bijouterie fictive en ligne pour un projet de partiel en B1</p>
-                            <a href="ProjetHopheis.html">Cliquez ici</a>
-                        </div>
+        <section class="section" id="competences" aria-labelledby="titre-competences">
+            <div class="container">
+                <h2 id="titre-competences">Compétences</h2>
+                <dl class="skills">
+                    <div class="skills-row">
+                        <dt class="label">Front</dt>
+                        <dd>
+                            <ul class="tags">
+                                <li class="tag">HTML</li>
+                                <li class="tag">CSS</li>
+                                <li class="tag">JavaScript</li>
+                                <li class="tag">TypeScript</li>
+                                <li class="tag">Tailwind</li>
+                                <li class="tag">React Native</li>
+                            </ul>
+                        </dd>
                     </div>
+                    <div class="skills-row">
+                        <dt class="label">Back</dt>
+                        <dd>
+                            <ul class="tags">
+                                <li class="tag">PHP</li>
+                                <li class="tag">NestJS</li>
+                                <li class="tag">GraphQL</li>
+                                <li class="tag">Prisma</li>
+                            </ul>
+                        </dd>
+                    </div>
+                    <div class="skills-row">
+                        <dt class="label">Données</dt>
+                        <dd>
+                            <ul class="tags">
+                                <li class="tag">PostgreSQL</li>
+                            </ul>
+                        </dd>
+                    </div>
+                    <div class="skills-row">
+                        <dt class="label">Outils</dt>
+                        <dd>
+                            <ul class="tags">
+                                <li class="tag">Git</li>
+                                <li class="tag">Docker</li>
+                                <li class="tag">Figma</li>
+                            </ul>
+                        </dd>
+                    </div>
+                </dl>
+            </div>
+        </section>
 
-                    <!-- 
-
-                    <div class="row" data-category="fullstack">
-                        <img src="image/Leaguepedia.png" alt="logo liguepedia" loading="lazy" decoding="async">
-                        <div class="layer">
-                            <h5>Gestion de tournoi</h5>
-                            <p>Développement d'un site de gestion et suivi de tournoi sur CSGO2 et League of Legend </p>
-                            <a>En cours</a>
-                        </div>
-                    </div> 
-                    -->
-
-                    <div class="row" data-category="frontend">
-                        <img src="image/Dae Jang.png" alt="logo Dae Jang" loading="lazy" decoding="async">
-                        <div class="layer">
-                            <h5>Dae Jang</h5>
-                            <p>Réalisation d'un site de restaurant coréen en bootstrap </p>
-                            <a href="DaeJang.html">Cliquez ici</a>
-                        </div>
-                    </div>
-                    <div class="row" data-category="frontend">
-                        <img src="image/arcade.jpg" alt="image jeux retro" loading="lazy" decoding="async">
-                        <div class="layer">
-                            <h5>Site jeux Retro</h5>
-                            <p>Réalisation d'un site avec plusieurs jeux retro style Pacman,Snake ... </p>
-                            <a href="Retro.html">Cliquez ici</a>
-                        </div>
-                    </div>
-                    <div class="row" data-category="frontend">
-                        <img src="image/GameJam.jpg" alt="image jeux retro" loading="lazy" decoding="async">
-                        <div class="layer">
-                            <h5>Forge in the Fridge</h5>
-                            <p>Réalisation d'un jeu video pour la Game Jam</p>
-                            <a href="GamJam.html">Cliquez ici</a>
-                        </div>
-                    </div>
-                    <div class="row" data-category="Wordpress">
-                        <img src="image/clement.jpg" alt="Site de Clément Lesaffre" loading="lazy" decoding="async">
-                        <div class="layer">
-                            <h5>Site Clément Lesaffre</h5>
-                            <p>Refonte complète d'un site d'artiste sous WordPress &amp; Elementor Pro</p>
-                            <a href="ClementLesaffre.html">Cliquez ici</a>
-                        </div>
-                    </div>
-                    <div class="row" data-category="fullstack">
-                        <img src="image/braise.jpg" alt="image jeux retro" loading="lazy" decoding="async">
-                        <div class="layer">
-                            <h5>Site Braise</h5>
-                            <p>Réalisation du site pour un restaurant fictif</p>
-                            <a href="Braise.html">Cliquez ici</a>
-                        </div>
-                    </div>
-<div class="row" data-category="fullstack">
-                        <img src="image/TIKR.png" alt="image restaurant" loading="lazy" decoding="async">
-                        <div class="layer">
-                            <h5>Site TIKR</h5>
-                            <p>Réalisation du site de billeterie en ligne pour des concerts et spectacles</p>
-                            <a href="TIKR.html">Cliquez ici</a>
-                        </div>
-                    </div>
-                    <div class="row" data-category="fullstack">
-                        <div style="width:100%;height:100%;background:linear-gradient(135deg,#1a1238,#8b5cf6);display:flex;align-items:center;justify-content:center;">
-                            <span style="font-size:48px;">✦</span>
-                        </div>
-                        <div class="layer">
-                            <h5>Ocaria</h5>
-                            <p>Stage — Application mobile communautaire pour les créateurs d'OCs</p>
-                            <a href="Ocaria.html">Cliquez ici</a>
-                        </div>
-                    </div>
+        <section class="section" id="contact" aria-labelledby="titre-contact">
+            <div class="container">
+                <h2 id="titre-contact">Contact</h2>
+                <div class="contact">
+                    <p class="contact-lead">Je recherche une alternance en développement web — Nice / Sophia Antipolis.</p>
+                    <ul class="contact-links">
+                        <li>
+                            <a href="mailto:quentinperrusson017@gmail.com">
+                                <i class="bx bx-envelope" aria-hidden="true"></i>
+                                <span>quentinperrusson017@gmail.com</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/quentin-perrusson/" target="_blank" rel="noopener">
+                                <i class="bx bxl-linkedin-square" aria-hidden="true"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/QuentinPerrusson21" target="_blank" rel="noopener">
+                                <i class="bx bxl-github" aria-hidden="true"></i>
+                                <span>GitHub</span>
+                            </a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="skills-section" id="competences">
-        <div class="skills-container">
-            <div class="skills-header reveal">
-                <span class="about-tag">COMPÉTENCES</span>
-                <h2>Stack <span class="gradient-text">Technique</span></h2>
-            </div>
-            <div class="skills-grid reveal">
-                <div class="skill-card"><i class='bx bxl-html5'></i><span>HTML5</span></div>
-                <div class="skill-card"><i class='bx bxl-css3'></i><span>CSS3</span></div>
-                <div class="skill-card"><i class='bx bxl-javascript'></i><span>JavaScript</span></div>
-                <div class="skill-card"><i class='bx bxl-php'></i><span>PHP</span></div>
-                <div class="skill-card"><i class='bx bxl-react'></i><span>React Native</span></div>
-                <div class="skill-card"><i class='bx bxl-typescript'></i><span>TypeScript</span></div>
-                <div class="skill-card"><i class='bx bxl-tailwind-css'></i><span>Tailwind</span></div>
-                <div class="skill-card"><i class='bx bx-data'></i><span>GraphQL</span></div>
-                <div class="skill-card"><i class='bx bxl-nodejs'></i><span>NestJS</span></div>
-                <div class="skill-card"><i class='bx bx-server'></i><span>Prisma</span></div>
-                <div class="skill-card"><i class='bx bxl-postgresql'></i><span>PostgreSQL</span></div>
-                <div class="skill-card"><i class='bx bxl-docker'></i><span>Docker</span></div>
-                <div class="skill-card"><i class='bx bxl-git'></i><span>Git</span></div>
-                <div class="skill-card"><i class='bx bxl-figma'></i><span>Figma</span></div>
-            </div>
-        </div>
-    </section>
+    </main>
 
     <footer class="footer">
-        <div href="#Propos" class="footer-content">
-            <p class="footer-name">Quentin Perrusson</p>
-            <p class="footer-desc">Développeur Full-Stack · Nice, France</p>
-            <div class="footer-links">
-                <a href="https://www.linkedin.com/in/quentin-perrusson/" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/QuentinPerrusson21" target="_blank"><i class='bx bxl-github'></i></a>
-                <a href="mailto:quentinperrusson017@gmail.com"><i class='bx bx-envelope'></i></a>
-            </div>
-            <p class="footer-copy">2025 Quentin Perrusson</p>
+        <div class="container">
+            <p>© 2026 Quentin Perrusson</p>
         </div>
     </footer>
 
     <script src="main.js"></script>
-
-    <button class="theme-toggle" aria-label="Changer de theme" title="Mode clair / sombre"><i class='bx bx-sun'></i></button>
-    <script src="theme.js"></script></body>
+    <script src="theme.js"></script>
+</body>
 </html>
-
