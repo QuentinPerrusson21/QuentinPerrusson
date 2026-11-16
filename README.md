@@ -12,8 +12,9 @@ Site vitrine présentant mon parcours, mes compétences et mes projets. Dévelop
 
 - **Accueil** — présentation et liens (LinkedIn, GitHub, CV)
 - **À propos** — parcours, formation et informations
-- **Portfolio** — projets filtrables par catégorie (Front-end, Back-end, Full-stack, WordPress), chaque projet disposant de sa page de détail
+- **Projets** — projets filtrables par catégorie (Front-end, Back-end, Full-stack, WordPress), chaque projet disposant de sa page de détail
 - **Compétences** — stack technique
+- **Contact** — e-mail, LinkedIn, GitHub
 
 ## Projets présentés
 
@@ -31,7 +32,8 @@ Site vitrine présentant mon parcours, mes compétences et mes projets. Dévelop
 ## Stack technique
 
 - **Langages :** HTML5, CSS3, JavaScript
-- **Bibliothèques :** [Typed.js](https://github.com/mattboldt/typed.js/), [Boxicons](https://boxicons.com/)
+- **Icônes :** [Boxicons](https://boxicons.com/)
+- **Polices :** Inter, JetBrains Mono (Google Fonts)
 - **Déploiement :** GitHub Pages
 
 ## Développement local
