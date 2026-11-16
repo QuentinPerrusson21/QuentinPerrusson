@@ -3,135 +3,155 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projet Hopheis - Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/icons.css">
-    <link rel="stylesheet" href="stylesheet.css">
-
+    <title>Projet Hopheis — Quentin Perrusson</title>
+    <meta name="description" content="Hopheis Bijouterie : Site e-commerce moderne pour une bijouterie de luxe en ligne">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <script>(function(){try{var t=localStorage.getItem("theme");if(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
 </head>
 <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
     <header class="header">
-        <a href="index.html" class="back-btn">
-            <i class='bx bx-arrow-back'></i>
-            <span>Retour au portfolio</span>
-        </a>
+        <a class="brand" href="index.html">Quentin Perrusson</a>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="index.html#a-propos">À propos</a>
+            <a href="index.html#projets">Projets</a>
+            <a href="index.html#competences">Compétences</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+            <i class="bx bx-moon" aria-hidden="true"></i>
+        </button>
     </header>
 
-    <div class="project-container">
+    <main id="contenu" class="container project-page">
+        <a class="back-btn" href="index.html#projets">
+            <i class="bx bx-arrow-back" aria-hidden="true"></i>
+            <span>Tous les projets</span>
+        </a>
 
-        <div class="project-hero">
-            <h1> Hopheis Bijouterie</h1>
-            <p class="project-tagline">Site e-commerce moderne pour une bijouterie de luxe en ligne</p>
+        <article class="project-container">
 
-            <div class="status-badges">
-                <span class="badge badge-live">
-                    <i class='bx  bx-check-circle'></i>
-                    En ligne
-                </span>
-                <span class="badge badge-github">
-                    <i class='bx bxl-github'></i>
-                    Open Source
-                </span>
-            </div>
-        </div>
+            <div class="project-hero">
+                <h1> Hopheis Bijouterie</h1>
+                <p class="project-tagline">Site e-commerce moderne pour une bijouterie de luxe en ligne</p>
 
-        <section class="project-section">
-            <h2>
-                Contexte & Objectif
-            </h2>
-            <p>
-                Hopheis est un projet réalisé dans le cadre de mon partiel en B1, consistant à créer une plateforme e-commerce complète pour une bijouterie fictive.
-                L'objectif était de développer un site moderne permettant la gestion de produits, un panier d'achat fonctionnel, et une expérience utilisateur fluide et élégante.
-            </p>
-            <p style="margin-top: 15px;">
-                <strong>Besoin technique :</strong> Créer une solution e-commerce avec gestion de l'inventaire, système de recherche et filtres.
-            </p>
-        </section>
-
-        <section class="project-section">
-            <h2>
-                Stack Technique
-            </h2>
-            <div class="tech-stack">
-                <div class="tech-item">
-                    <i class='bx bxl-html5'></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-css3'></i>
-                    <span>CSS3</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-javascript'></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/php.svg" alt="PHP" style="width: 48px; height: 48px; filter: invert(1);">
-                    <span>PHP</span>
-                </div>
-                <div class="tech-item">
-                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/mysql.svg" alt="MySQL" style="width: 48px; height: 48px; filter: invert(1);">
-                    <span>MySQL</span>
+                <div class="status-badges">
+                    <span class="badge badge-live">
+                        <i class="bx  bx-check-circle" aria-hidden="true"></i>
+                        En ligne
+                    </span>
+                    <span class="badge badge-github">
+                        <i class="bx bxl-github" aria-hidden="true"></i>
+                        Open Source
+                    </span>
                 </div>
             </div>
-        </section>
 
-        <section class="project-section">
-            <h2>
-                Démo & Déploiement
-            </h2>
-            <div class="demo-container">
-                <img src="image/HopheisLandingPAge.jpg" alt="Démo Hopheis" class="demo-image">
-                <div class="demo-links">
-                    <a href="https://github.com/QuentinPerrusson21?tab=repositories" target="_blank" class="demo-btn">
-                        <i class='bx bxl-github'></i>
-                        Voir le code source
-                    </a>
+            <section class="project-section">
+                <h2>
+                    Contexte & Objectif
+                </h2>
+                <p>
+                    Hopheis est un projet réalisé dans le cadre de mon partiel en B1, consistant à créer une plateforme e-commerce complète pour une bijouterie fictive.
+                    L'objectif était de développer un site moderne permettant la gestion de produits, un panier d'achat fonctionnel, et une expérience utilisateur fluide et élégante.
+                </p>
+                <p>
+                    <strong>Besoin technique :</strong> Créer une solution e-commerce avec gestion de l'inventaire, système de recherche et filtres.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>
+                    Stack Technique
+                </h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <i class="bx bxl-html5" aria-hidden="true"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-css3" aria-hidden="true"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-javascript" aria-hidden="true"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-php" aria-hidden="true"></i>
+                        <span>PHP</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bx-data" aria-hidden="true"></i>
+                        <span>MySQL</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="project-section">
-            <h2>
-                Challenges Techniques Rencontrés
-            </h2>
-            <ul class="challenge-list">
-                <li class="challenge-item">
-                    <h3>Base de données</h3>
-                    <p>
-                        <strong>Défi :</strong> Créer une base de données et correctement l'intégrer sur le site.<br>
-                        <strong>Solution :</strong> Recherche de mon coté sur internet pour bien comprendre et touver des solutions.
-                    </p>
-                </li>
-                <li class="challenge-item">
-                    <h3> Gestion du Panier</h3>
-                    <p>
-                        <strong>Défi :</strong> Problème sur l'affichage des images des bijoux qui n'apparaissaient pas depuis ma base de donnée.<br>
-                        <strong>Solution :</strong> J'ai simplement mis en HTML chaque image (Mais si futur projet en back alors trouver une vrai solution).
-                    </p>
-                </li>
-            </ul>
-        </section>
+            <section class="project-section">
+                <h2>
+                    Démo & Déploiement
+                </h2>
+                <div class="demo-container">
+                    <img class="demo-image" src="image/HopheisLandingPAge.jpg" alt="Démo Hopheis" width="1600" height="881" loading="lazy" decoding="async">
+                    <div class="demo-links">
+                        <a class="btn btn-secondary" href="https://github.com/QuentinPerrusson21?tab=repositories" target="_blank" rel="noopener">
+                            <i class="bx bxl-github" aria-hidden="true"></i>
+                            Voir le code source
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-        <section class="project-section">
-            <h2>
-                Rétrospective Personnelle
-            </h2>
-            <div class="retrospective-box">
-                <h3 style="margin-bottom: 15px; color: #8552F2;">Ce que j'ai appris :</h3>
-                <ul>
-                    <li>Maîtrise avancée de CSS Grid et Flexbox pour les layouts</li>
-                    <li>Utilisation de JavaScript pour rendre le site dynamique</li>
-                    <li>Utilisation de PHP et MySQL pour le coté Backend</li>
+            <section class="project-section">
+                <h2>
+                    Challenges Techniques Rencontrés
+                </h2>
+                <ul class="challenge-list">
+                    <li class="challenge-item">
+                        <h3>Base de données</h3>
+                        <p>
+                            <strong>Défi :</strong> Créer une base de données et correctement l'intégrer sur le site.<br>
+                            <strong>Solution :</strong> Recherche de mon coté sur internet pour bien comprendre et touver des solutions.
+                        </p>
+                    </li>
+                    <li class="challenge-item">
+                        <h3> Gestion du Panier</h3>
+                        <p>
+                            <strong>Défi :</strong> Problème sur l'affichage des images des bijoux qui n'apparaissaient pas depuis ma base de donnée.<br>
+                            <strong>Solution :</strong> J'ai simplement mis en HTML chaque image (Mais si futur projet en back alors trouver une vrai solution).
+                        </p>
+                    </li>
                 </ul>
-            </div>
-        </section>
-    </div>
+            </section>
 
-    <button class="theme-toggle" aria-label="Changer de theme" title="Mode clair / sombre"><i class='bx bx-sun'></i></button>
-    <script src="theme.js"></script></body>
+            <section class="project-section">
+                <h2>
+                    Rétrospective Personnelle
+                </h2>
+                <div class="retrospective-box">
+                    <h3>Ce que j'ai appris :</h3>
+                    <ul>
+                        <li>Maîtrise avancée de CSS Grid et Flexbox pour les layouts</li>
+                        <li>Utilisation de JavaScript pour rendre le site dynamique</li>
+                        <li>Utilisation de PHP et MySQL pour le coté Backend</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Quentin Perrusson</p>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
 </html>

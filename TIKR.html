@@ -3,182 +3,203 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TIKR - Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="stylesheet.css">
-
+    <title>TIKR — Quentin Perrusson</title>
+    <meta name="description" content="TIKR — Plateforme de billetterie en ligne : Concerts · Festivals · Théâtre · Humour">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <script>(function(){try{var t=localStorage.getItem("theme");if(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
 </head>
 <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
     <header class="header">
-        <a href="index.html" class="back-btn">
-            <i class='bx bx-arrow-back'></i>
-            <span>Retour au portfolio</span>
-        </a>
+        <a class="brand" href="index.html">Quentin Perrusson</a>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="index.html#a-propos">À propos</a>
+            <a href="index.html#projets">Projets</a>
+            <a href="index.html#competences">Compétences</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+            <i class="bx bx-moon" aria-hidden="true"></i>
+        </button>
     </header>
 
-    <div class="project-container">
+    <main id="contenu" class="container project-page">
+        <a class="back-btn" href="index.html#projets">
+            <i class="bx bx-arrow-back" aria-hidden="true"></i>
+            <span>Tous les projets</span>
+        </a>
 
-        <div class="project-hero">
-            <h1>TIKR — Plateforme de billetterie en ligne</h1>
-            <p class="project-tagline">Concerts · Festivals · Théâtre · Humour</p>
+        <article class="project-container">
 
-            <div class="status-badges">
-                <span class="badge badge-live">
-                    <i class='bx bx-check-circle'></i>
-                    En ligne
-                </span>
-                <span class="badge badge-github">
-                    <i class='bx bxl-github'></i>
-                    Code Source
-                </span>
-            </div>
-        </div>
+            <div class="project-hero">
+                <h1>TIKR — Plateforme de billetterie en ligne</h1>
+                <p class="project-tagline">Concerts · Festivals · Théâtre · Humour</p>
 
-        <section class="project-section">
-            <h2>Contexte & Objectif</h2>
-            <p>
-                <strong>TIKR</strong> est une plateforme de billetterie en ligne développée from scratch en PHP natif et MySQL. Elle permet à des utilisateurs de réserver des billets pour des événements culturels (concerts, festivals, spectacles) et offre aux administrateurs un back-office complet avec gestion de jauges en temps réel, tableau de bord analytique et CRUD avancé.
-            </p>
-            <p style="margin-top: 15px;">
-                <strong>Cadre :</strong> Projet B2 Développement Web — projet individuel<br>
-                <strong>Durée :</strong> 35 heures &nbsp;·&nbsp; <strong>Année :</strong> 2025 — 2026<br>
-                <strong>Rôle :</strong> Conception, développement, design, déploiement
-            </p>
-        </section>
-
-        <section class="project-section">
-            <h2>Stack Technique</h2>
-            <div class="tech-stack">
-                <div class="tech-item">
-                    <i class='bx bxl-php'></i>
-                    <span>PHP 8 + PDO</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bx-data'></i>
-                    <span>MySQL InnoDB</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-html5'></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-tailwind-css'></i>
-                    <span>Tailwind CSS</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-javascript'></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bx-file'></i>
-                    <span>html2pdf.js</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bx-qr'></i>
-                    <span>API QR Code</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-git'></i>
-                    <span>Git / GitHub</span>
+                <div class="status-badges">
+                    <span class="badge badge-live">
+                        <i class="bx bx-check-circle" aria-hidden="true"></i>
+                        En ligne
+                    </span>
+                    <span class="badge badge-github">
+                        <i class="bx bxl-github" aria-hidden="true"></i>
+                        Code Source
+                    </span>
                 </div>
             </div>
-        </section>
 
-        <section class="project-section">
-            <h2>Fonctionnalités clés</h2>
-            <ul class="challenge-list">
-                <li class="challenge-item">
-                    <h3 style="color: #8b5cf6;">Front office (utilisateur)</h3>
-                    <ul style="margin-top: 10px; padding-left: 20px; line-height: 2;">
-                        <li>Authentification sécurisée (bcrypt, CSRF, sessions)</li>
-                        <li>Catalogue avec filtres et recherche en temps réel</li>
-                        <li>Réservation transactionnelle avec gestion de la concurrence</li>
-                        <li>Génération de billets PDF avec QR code</li>
-                        <li>Espace personnel : historique et téléchargement des billets</li>
-                    </ul>
-                </li>
-                <li class="challenge-item">
-                    <h3 style="color: #8b5cf6;">Back office (administrateur)</h3>
-                    <ul style="margin-top: 10px; padding-left: 20px; line-height: 2;">
-                        <li>Tableau de bord avec KPI : CA, top événements, taux de remplissage</li>
-                        <li>CRUD complet des événements et catégories de places</li>
-                        <li>Gestion des réservations avec filtres et annulation (remise en stock auto)</li>
-                        <li>Gestion des utilisateurs : recherche, activation/désactivation</li>
-                    </ul>
-                </li>
-            </ul>
-        </section>
-
-        <section class="project-section">
-            <h2>Démo & Déploiement</h2>
-            <div class="demo-container">
-                <img src="image/TIKR.png" alt="Démo TIKR" class="demo-image">
-                <div class="demo-links">
-                    <a href="https://projet-spe-quentin.maelfabre.fr" target="_blank" class="demo-btn">
-                        <i class='bx bx-globe'></i>
-                        Voir le site en ligne
-                    </a>
-                    <a href="https://github.com/QuentinPerrusson21?tab=repositories" target="_blank" class="demo-btn">
-                        <i class='bx bxl-github'></i>
-                        Voir le code source
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <section class="project-section">
-            <h2>Défis Techniques Rencontrés</h2>
-            <ul class="challenge-list">
-                <li class="challenge-item">
-                    <h3>Concurrence sur les jauges de places</h3>
-                    <p>
-                        <strong>Défi :</strong> Lors de réservations simultanées sur le dernier billet, la jauge pouvait passer en négatif.<br>
-                        <strong>Solution :</strong> Mise en place d'une transaction SQL avec <code>SELECT FOR UPDATE</code> pour poser un verrou pessimiste sur la ligne. Le second utilisateur attend la fin de la transaction du premier.
-                    </p>
-                </li>
-                <li class="challenge-item">
-                    <h3>Bugs de production imprévisibles</h3>
-                    <p>
-                        <strong>Défi :</strong> Lors du déploiement sur Hostinger : les <code>AUTO_INCREMENT</code> des colonnes id avaient été supprimés lors de l'import SQL, et le mode strict MySQL (<code>ONLY_FULL_GROUP_BY</code>) refusait certaines requêtes.<br>
-                        <strong>Solution :</strong> Diagnostic via phpMyAdmin et logs Apache, puis correction par <code>ALTER TABLE</code> et réécriture des requêtes.
-                    </p>
-                </li>
-                <li class="challenge-item">
-                    <h3>Sécurité complète (OWASP)</h3>
-                    <p>
-                        Implémentation des protections OWASP : requêtes préparées contre l'injection SQL, hash bcrypt pour les mots de passe, <code>htmlspecialchars</code> contre XSS, tokens CSRF sur tous les POST, sessions <code>HttpOnly + SameSite</code> avec <code>regenerate_id</code>, blocage Apache des fichiers sensibles.
-                    </p>
-                </li>
-            </ul>
-        </section>
-
-        <section class="project-section">
-            <h2>Rétrospective Personnelle</h2>
-            <div class="retrospective-box">
-                <h3 style="margin-bottom: 15px; color: #8b5cf6;">Compétences mobilisées :</h3>
-                <p style="margin-bottom: 15px;">
-                    <strong>Backend</strong> · <strong>Modélisation de données</strong> · <strong>Sécurité web</strong> · <strong>Transactions SQL</strong> · <strong>UI/UX</strong> · <strong>Déploiement</strong> · <strong>Debugging production</strong> · <strong>Versioning Git</strong>
+            <section class="project-section">
+                <h2>Contexte & Objectif</h2>
+                <p>
+                    <strong>TIKR</strong> est une plateforme de billetterie en ligne développée from scratch en PHP natif et MySQL. Elle permet à des utilisateurs de réserver des billets pour des événements culturels (concerts, festivals, spectacles) et offre aux administrateurs un back-office complet avec gestion de jauges en temps réel, tableau de bord analytique et CRUD avancé.
                 </p>
-                <h3 style="margin-bottom: 10px; color: #8b5cf6;">Direction artistique :</h3>
-                <p style="margin-bottom: 15px;">
-                    Inspirée de l'esthétique brutaliste du jeu Marathon (Bungie) : interface sombre, accents fluo (vert acide et cyan), typographies Bebas Neue et Space Mono. Une identité forte qui différencie TIKR des plateformes classiques.
+                <p>
+                    <strong>Cadre :</strong> Projet B2 Développement Web — projet individuel<br>
+                    <strong>Durée :</strong> 35 heures &nbsp;·&nbsp; <strong>Année :</strong> 2025 — 2026<br>
+                    <strong>Rôle :</strong> Conception, développement, design, déploiement
                 </p>
-                <h3 style="margin-bottom: 10px; color: #8b5cf6;">Livrables :</h3>
-                <ul>
-                    <li>Site déployé en production sur Hostinger</li>
-                    <li>Code source versionné sur GitHub</li>
-                    <li>Dossier de projet (Word) + Présentation de soutenance (PowerPoint, DA Marathon)</li>
-                    <li>14 pages PHP front-office + 4 pages back-office</li>
-                    <li>5 tables relationnelles InnoDB</li>
+            </section>
+
+            <section class="project-section">
+                <h2>Stack Technique</h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <i class="bx bxl-php" aria-hidden="true"></i>
+                        <span>PHP 8 + PDO</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bx-data" aria-hidden="true"></i>
+                        <span>MySQL InnoDB</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-html5" aria-hidden="true"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-tailwind-css" aria-hidden="true"></i>
+                        <span>Tailwind CSS</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-javascript" aria-hidden="true"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bx-file" aria-hidden="true"></i>
+                        <span>html2pdf.js</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bx-qr" aria-hidden="true"></i>
+                        <span>API QR Code</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-git" aria-hidden="true"></i>
+                        <span>Git / GitHub</span>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2>Fonctionnalités clés</h2>
+                <ul class="challenge-list">
+                    <li class="challenge-item">
+                        <h3>Front office (utilisateur)</h3>
+                        <ul>
+                            <li>Authentification sécurisée (bcrypt, CSRF, sessions)</li>
+                            <li>Catalogue avec filtres et recherche en temps réel</li>
+                            <li>Réservation transactionnelle avec gestion de la concurrence</li>
+                            <li>Génération de billets PDF avec QR code</li>
+                            <li>Espace personnel : historique et téléchargement des billets</li>
+                        </ul>
+                    </li>
+                    <li class="challenge-item">
+                        <h3>Back office (administrateur)</h3>
+                        <ul>
+                            <li>Tableau de bord avec KPI : CA, top événements, taux de remplissage</li>
+                            <li>CRUD complet des événements et catégories de places</li>
+                            <li>Gestion des réservations avec filtres et annulation (remise en stock auto)</li>
+                            <li>Gestion des utilisateurs : recherche, activation/désactivation</li>
+                        </ul>
+                    </li>
                 </ul>
-            </div>
-        </section>
-    </div>
+            </section>
 
-    <button class="theme-toggle" aria-label="Changer de theme" title="Mode clair / sombre"><i class='bx bx-sun'></i></button>
-    <script src="theme.js"></script></body>
+            <section class="project-section">
+                <h2>Démo & Déploiement</h2>
+                <div class="demo-container">
+                    <img class="demo-image" src="image/TIKR.png" alt="Démo TIKR" width="3024" height="1964" loading="lazy" decoding="async">
+                    <div class="demo-links">
+                        <a class="btn btn-primary" href="https://projet-spe-quentin.maelfabre.fr" target="_blank" rel="noopener">
+                            <i class="bx bx-globe" aria-hidden="true"></i>
+                            Voir le site en ligne
+                        </a>
+                        <a class="btn btn-secondary" href="https://github.com/QuentinPerrusson21?tab=repositories" target="_blank" rel="noopener">
+                            <i class="bx bxl-github" aria-hidden="true"></i>
+                            Voir le code source
+                        </a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="project-section">
+                <h2>Défis Techniques Rencontrés</h2>
+                <ul class="challenge-list">
+                    <li class="challenge-item">
+                        <h3>Concurrence sur les jauges de places</h3>
+                        <p>
+                            <strong>Défi :</strong> Lors de réservations simultanées sur le dernier billet, la jauge pouvait passer en négatif.<br>
+                            <strong>Solution :</strong> Mise en place d'une transaction SQL avec <code>SELECT FOR UPDATE</code> pour poser un verrou pessimiste sur la ligne. Le second utilisateur attend la fin de la transaction du premier.
+                        </p>
+                    </li>
+                    <li class="challenge-item">
+                        <h3>Bugs de production imprévisibles</h3>
+                        <p>
+                            <strong>Défi :</strong> Lors du déploiement sur Hostinger : les <code>AUTO_INCREMENT</code> des colonnes id avaient été supprimés lors de l'import SQL, et le mode strict MySQL (<code>ONLY_FULL_GROUP_BY</code>) refusait certaines requêtes.<br>
+                            <strong>Solution :</strong> Diagnostic via phpMyAdmin et logs Apache, puis correction par <code>ALTER TABLE</code> et réécriture des requêtes.
+                        </p>
+                    </li>
+                    <li class="challenge-item">
+                        <h3>Sécurité complète (OWASP)</h3>
+                        <p>
+                            Implémentation des protections OWASP : requêtes préparées contre l'injection SQL, hash bcrypt pour les mots de passe, <code>htmlspecialchars</code> contre XSS, tokens CSRF sur tous les POST, sessions <code>HttpOnly + SameSite</code> avec <code>regenerate_id</code>, blocage Apache des fichiers sensibles.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="project-section">
+                <h2>Rétrospective Personnelle</h2>
+                <div class="retrospective-box">
+                    <h3>Compétences mobilisées :</h3>
+                    <p>
+                        <strong>Backend</strong> · <strong>Modélisation de données</strong> · <strong>Sécurité web</strong> · <strong>Transactions SQL</strong> · <strong>UI/UX</strong> · <strong>Déploiement</strong> · <strong>Debugging production</strong> · <strong>Versioning Git</strong>
+                    </p>
+                    <h3>Direction artistique :</h3>
+                    <p>
+                        Inspirée de l'esthétique brutaliste du jeu Marathon (Bungie) : interface sombre, accents fluo (vert acide et cyan), typographies Bebas Neue et Space Mono. Une identité forte qui différencie TIKR des plateformes classiques.
+                    </p>
+                    <h3>Livrables :</h3>
+                    <ul>
+                        <li>Site déployé en production sur Hostinger</li>
+                        <li>Code source versionné sur GitHub</li>
+                        <li>Dossier de projet (Word) + Présentation de soutenance (PowerPoint, DA Marathon)</li>
+                        <li>14 pages PHP front-office + 4 pages back-office</li>
+                        <li>5 tables relationnelles InnoDB</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Quentin Perrusson</p>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
 </html>

@@ -3,133 +3,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Braise - Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/icons.css">
-    <link rel="stylesheet" href="stylesheet.css">    
-
+    <title>Braise — Quentin Perrusson</title>
+    <meta name="description" content="Braise : Site vitrine dynamique de restaurant avec système de réservation backend">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <script>(function(){try{var t=localStorage.getItem("theme");if(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
 </head>
 <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
     <header class="header">
-        <a href="index.html" class="back-btn">
-            <i class='bx bx-arrow-back'></i>
-            <span>Retour au portfolio</span>
-        </a>
+        <a class="brand" href="index.html">Quentin Perrusson</a>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="index.html#a-propos">À propos</a>
+            <a href="index.html#projets">Projets</a>
+            <a href="index.html#competences">Compétences</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+            <i class="bx bx-moon" aria-hidden="true"></i>
+        </button>
     </header>
 
-    <div class="project-container">
-        
-        <div class="project-hero">
-            <h1>Braise</h1>
-            <p class="project-tagline">Site vitrine dynamique de restaurant avec système de réservation backend</p>
-            
-            <div class="status-badges">
-                <span class="badge badge-live">
-                    <i class='bx bx-check-circle'></i> 
-                    En ligne
-                </span>
-                <span class="badge badge-github">
-                    <i class='bx bxl-github'></i>
-                    Code Source
-                </span>
-            </div>
-        </div>
+    <main id="contenu" class="container project-page">
+        <a class="back-btn" href="index.html#projets">
+            <i class="bx bx-arrow-back" aria-hidden="true"></i>
+            <span>Tous les projets</span>
+        </a>
 
-        <section class="project-section">
-            <h2>
-                Contexte & Objectif
-            </h2>
-            <p>
-                <strong>Braise</strong> est le site web complet d'un restaurant. L'objectif de ce projet était de dépasser la simple intégration visuelle en ajoutant de véritables fonctionnalités interactives et de la communication avec un serveur.
-            </p>
-            <p style="margin-top: 15px;">
-                Le site propose une carte interactive permettant de filtrer facilement les plats (entrées, plats principaux, boissons), ainsi qu'un système de réservation fonctionnel qui traite les données du client et lui envoie une confirmation par e-mail de manière automatisée.
-            </p>
-            <p style="margin-top: 15px;">
-                <strong>Besoin technique :</strong> Créer une interface fluide (HTML/CSS/JS) couplée à un Back-End en PHP pour le traitement sécurisé des formulaires.
-            </p>
-        </section>
+        <article class="project-container">
 
-        <section class="project-section">
-            <h2>
-                Stack Technique
-            </h2>
-            <div class="tech-stack">
-                <div class="tech-item">
-                    <i class='bx bxl-html5'></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-css3'></i>
-                    <span>CSS3</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-javascript'></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-php'></i>
-                    <span>PHP</span>
+            <div class="project-hero">
+                <h1>Braise</h1>
+                <p class="project-tagline">Site vitrine dynamique de restaurant avec système de réservation backend</p>
+
+                <div class="status-badges">
+                    <span class="badge badge-live">
+                        <i class="bx bx-check-circle" aria-hidden="true"></i>
+                        En ligne
+                    </span>
+                    <span class="badge badge-github">
+                        <i class="bx bxl-github" aria-hidden="true"></i>
+                        Code Source
+                    </span>
                 </div>
             </div>
-        </section>
 
-        <section class="project-section">
-            <h2>
-                Démo & Déploiement
-            </h2>
-            <div class="demo-container">
-                <img src="image/braiseIndex.jpg" alt="Démo du restaurant Braise" class="demo-image">
-                <div class="demo-links">
-                    <a href="https://github.com/QuentinPerrusson21?tab=repositories" target="_blank" class="demo-btn">
-                        <i class='bx bxl-github'></i>
-                        Voir le code source
-                    </a>
+            <section class="project-section">
+                <h2>
+                    Contexte & Objectif
+                </h2>
+                <p>
+                    <strong>Braise</strong> est le site web complet d'un restaurant. L'objectif de ce projet était de dépasser la simple intégration visuelle en ajoutant de véritables fonctionnalités interactives et de la communication avec un serveur.
+                </p>
+                <p>
+                    Le site propose une carte interactive permettant de filtrer facilement les plats (entrées, plats principaux, boissons), ainsi qu'un système de réservation fonctionnel qui traite les données du client et lui envoie une confirmation par e-mail de manière automatisée.
+                </p>
+                <p>
+                    <strong>Besoin technique :</strong> Créer une interface fluide (HTML/CSS/JS) couplée à un Back-End en PHP pour le traitement sécurisé des formulaires.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>
+                    Stack Technique
+                </h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <i class="bx bxl-html5" aria-hidden="true"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-css3" aria-hidden="true"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-javascript" aria-hidden="true"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-php" aria-hidden="true"></i>
+                        <span>PHP</span>
+                    </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section class="project-section">
-            <h2>
-                Challenges Techniques Rencontrés
-            </h2>
-            <ul class="challenge-list">
-                <li class="challenge-item">
-                    <h3>Traitement du Formulaire et Envoi d'E-mail</h3>
-                    <p>
-                        <strong>Défi :</strong> Récupérer les données de réservation saisies par l'utilisateur (nom, date, nombre de personnes), les valider côté serveur, et envoyer un e-mail de confirmation automatique sans utiliser d'API externe payante.<br>
-                        <strong>Solution :</strong> J'ai développé un script PHP qui récupère les données via la méthode <code>POST</code>. J'ai mis en place des vérifications pour éviter les champs vides ou les failles basiques, puis j'ai configuré la fonction native <code>mail()</code> de PHP (avec les bons headers) pour expédier la confirmation directement dans la boîte de réception du client.
-                    </p>
-                </li>
-                <li class="challenge-item">
-                    <h3>Filtrage Dynamique de la Carte</h3>
-                    <p>
-                        <strong>Défi :</strong> Permettre aux utilisateurs de trier le menu (Entrées, Plats, Boissons) de manière instantanée, sans avoir à recharger la page web à chaque clic.<br>
-                        <strong>Solution :</strong> J'ai utilisé JavaScript pour écouter les clics sur les boutons de catégories. En associant des attributs de données (ex: <code>data-category</code>) aux éléments HTML du menu, le script masque ou affiche dynamiquement les bons plats en modifiant leurs classes CSS en temps réel.
-                    </p>
-                </li>
-            </ul>
-        </section>
+            <section class="project-section">
+                <h2>
+                    Démo & Déploiement
+                </h2>
+                <div class="demo-container">
+                    <img class="demo-image" src="image/braiseIndex.jpg" alt="Démo du restaurant Braise" width="1600" height="875" loading="lazy" decoding="async">
+                    <div class="demo-links">
+                        <a class="btn btn-secondary" href="https://github.com/QuentinPerrusson21?tab=repositories" target="_blank" rel="noopener">
+                            <i class="bx bxl-github" aria-hidden="true"></i>
+                            Voir le code source
+                        </a>
+                    </div>
+                </div>
+            </section>
 
-        <section class="project-section">
-            <h2>
-                Rétrospective Personnelle
-            </h2>
-            <div class="retrospective-box">
-                <h3 style="margin-bottom: 15px; color: #8552F2;">Ce que j'ai appris :</h3>
-                <ul>
-                    <li><strong>Bases du Back-End :</strong> Comprendre le cycle requête/réponse HTTP et la communication entre le Front-End (formulaire) et le serveur (PHP).</li>
-                    <li><strong>Manipulation du DOM :</strong> Création d'une interface réactive avec JavaScript pour améliorer l'expérience utilisateur (UX) sur la lecture du menu.</li>
-                    <li><strong>Fiabilité des données :</strong> Apprentissage de l'importance de sécuriser et de vérifier les entrées utilisateurs avant de les traiter ou d'envoyer un e-mail.</li>
+            <section class="project-section">
+                <h2>
+                    Challenges Techniques Rencontrés
+                </h2>
+                <ul class="challenge-list">
+                    <li class="challenge-item">
+                        <h3>Traitement du Formulaire et Envoi d'E-mail</h3>
+                        <p>
+                            <strong>Défi :</strong> Récupérer les données de réservation saisies par l'utilisateur (nom, date, nombre de personnes), les valider côté serveur, et envoyer un e-mail de confirmation automatique sans utiliser d'API externe payante.<br>
+                            <strong>Solution :</strong> J'ai développé un script PHP qui récupère les données via la méthode <code>POST</code>. J'ai mis en place des vérifications pour éviter les champs vides ou les failles basiques, puis j'ai configuré la fonction native <code>mail()</code> de PHP (avec les bons headers) pour expédier la confirmation directement dans la boîte de réception du client.
+                        </p>
+                    </li>
+                    <li class="challenge-item">
+                        <h3>Filtrage Dynamique de la Carte</h3>
+                        <p>
+                            <strong>Défi :</strong> Permettre aux utilisateurs de trier le menu (Entrées, Plats, Boissons) de manière instantanée, sans avoir à recharger la page web à chaque clic.<br>
+                            <strong>Solution :</strong> J'ai utilisé JavaScript pour écouter les clics sur les boutons de catégories. En associant des attributs de données (ex: <code>data-category</code>) aux éléments HTML du menu, le script masque ou affiche dynamiquement les bons plats en modifiant leurs classes CSS en temps réel.
+                        </p>
+                    </li>
                 </ul>
-            </div>
-        </section>
-    </div>
+            </section>
 
-    <button class="theme-toggle" aria-label="Changer de theme" title="Mode clair / sombre"><i class='bx bx-sun'></i></button>
-    <script src="theme.js"></script></body>
+            <section class="project-section">
+                <h2>
+                    Rétrospective Personnelle
+                </h2>
+                <div class="retrospective-box">
+                    <h3>Ce que j'ai appris :</h3>
+                    <ul>
+                        <li><strong>Bases du Back-End :</strong> Comprendre le cycle requête/réponse HTTP et la communication entre le Front-End (formulaire) et le serveur (PHP).</li>
+                        <li><strong>Manipulation du DOM :</strong> Création d'une interface réactive avec JavaScript pour améliorer l'expérience utilisateur (UX) sur la lecture du menu.</li>
+                        <li><strong>Fiabilité des données :</strong> Apprentissage de l'importance de sécuriser et de vérifier les entrées utilisateurs avant de les traiter ou d'envoyer un e-mail.</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Quentin Perrusson</p>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
 </html>

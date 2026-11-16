@@ -3,136 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DaeJang - Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/icons.css">
-    <link rel="stylesheet" href="stylesheet.css">    
-
+    <title>DaeJang — Quentin Perrusson</title>
+    <meta name="description" content="Dae Jang : Site en front pour un restaurant Coréen">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <script>(function(){try{var t=localStorage.getItem("theme");if(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
 </head>
 <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
     <header class="header">
-        <a href="index.html" class="back-btn">
-            <i class='bx bx-arrow-back'></i>
-            <span>Retour au portfolio</span>
-        </a>
+        <a class="brand" href="index.html">Quentin Perrusson</a>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="index.html#a-propos">À propos</a>
+            <a href="index.html#projets">Projets</a>
+            <a href="index.html#competences">Compétences</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+            <i class="bx bx-moon" aria-hidden="true"></i>
+        </button>
     </header>
 
-    <div class="project-container">
-        
-        <div class="project-hero">
-            <h1> Dae Jang</h1>
-            <p class="project-tagline">Site en front pour un restaurant Coréen</p>
-            
-            <div class="status-badges">
-                <span class="badge badge-live">
-                    <i class='bx  bx-check-circle'></i> 
-                    En ligne
-                </span>
-                <span class="badge badge-github">
-                    <i class='bx bxl-github'></i>
-                    Open Source
-                </span>
-            </div>
-        </div>
+    <main id="contenu" class="container project-page">
+        <a class="back-btn" href="index.html#projets">
+            <i class="bx bx-arrow-back" aria-hidden="true"></i>
+            <span>Tous les projets</span>
+        </a>
 
-        <section class="project-section">
-            <h2>
-                Contexte & Objectif
-            </h2>
-            <p>
-                DaeJang est un projet réalisé dans le cadre de mon cours de développement web, consistant à créer le site vitrine d'un restaurant fictif. L'objectif était d'exploiter le
-                framework Bootstrap pour développer une interface moderne et entièrement responsive, offrant une mise en valeur du menu et une expérience utilisateur fluide sur tous les écrans.
-            </p>
-            <p style="margin-top: 15px;">
-                <strong>Besoin technique :</strong> Créer un site en utilisant exclusivement Bootstrap.
-            </p>
-        </section>
+        <article class="project-container">
 
-        <section class="project-section">
-            <h2>
-                Stack Technique
-            </h2>
-            <div class="tech-stack">
-                <div class="tech-item">
-                    <i class='bx bxl-html5'></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-css3'></i>
-                    <span>CSS3</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-javascript'></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-bootstrap'></i>
-                    <span>Bootstrap</span>
+            <div class="project-hero">
+                <h1> Dae Jang</h1>
+                <p class="project-tagline">Site en front pour un restaurant Coréen</p>
+
+                <div class="status-badges">
+                    <span class="badge badge-live">
+                        <i class="bx  bx-check-circle" aria-hidden="true"></i>
+                        En ligne
+                    </span>
+                    <span class="badge badge-github">
+                        <i class="bx bxl-github" aria-hidden="true"></i>
+                        Open Source
+                    </span>
                 </div>
             </div>
-        </section>
 
-        <section class="project-section">
-            <h2>
-                Démo & Déploiement
-            </h2>
-            <div class="demo-container">
-                <img src="image/DaeJang.jpg" alt="Démo DaeJang" class="demo-image">
-                <div class="demo-links">
-                    <a href="https://github.com/QuentinPerrusson21?tab=repositories" target="_blank" class="demo-btn">
-                        <i class='bx bxl-github'></i>
-                        Voir le code source
-                    </a>
+            <section class="project-section">
+                <h2>
+                    Contexte & Objectif
+                </h2>
+                <p>
+                    DaeJang est un projet réalisé dans le cadre de mon cours de développement web, consistant à créer le site vitrine d'un restaurant fictif. L'objectif était d'exploiter le
+                    framework Bootstrap pour développer une interface moderne et entièrement responsive, offrant une mise en valeur du menu et une expérience utilisateur fluide sur tous les écrans.
+                </p>
+                <p>
+                    <strong>Besoin technique :</strong> Créer un site en utilisant exclusivement Bootstrap.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>
+                    Stack Technique
+                </h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <i class="bx bxl-html5" aria-hidden="true"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-css3" aria-hidden="true"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-javascript" aria-hidden="true"></i>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-bootstrap" aria-hidden="true"></i>
+                        <span>Bootstrap</span>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="project-section">
-            <h2>
-                Challenges Techniques Rencontrés
-            </h2>
-            <ul class="challenge-list">
-                <li class="challenge-item">
-                    <h3>Le Responsive Design (La grille Bootstrap)</h3>
-                    <p>
-                        <strong>Défi :</strong> Adapter l'affichage de la carte du restaurant pour que le menu soit bien lisible sur ordinateur, mais aussi sur petit écran (téléphone) sans que tout se chevauche.<br>
-                        <strong>Solution :</strong> J'ai dû me documenter et faire plusieurs tests avec le système de grille de Bootstrap (les classes col-sm, col-md, etc.) pour comprendre comment les colonnes se réorganisent selon la taille de l'écran.
-                    </p>
-                </li>
-                <li class="challenge-item">
-                    <h3> Personnalisation de l'identité visuelle</h3>
-                    <p>
-                        <strong>Défi :</strong> Éviter que le site ressemble à un modèle Bootstrap "standard" (par défaut), notamment pour la barre de navigation (Navbar) et les couleurs des boutons.<br>
-                        <strong>Solution :</strong> J'ai créé un fichier CSS personnel pour venir "écraser" (surcharger) certaines règles de base de Bootstrap et appliquer la charte graphique de DaeJang.
-                    </p>
-                </li>
-            </ul>
-        </section>
+            </section>
 
-        <section class="project-section">
-            <h2>
-                Rétrospective Personnelle
-            </h2>
+            <section class="project-section">
+                <h2>
+                    Démo & Déploiement
+                </h2>
+                <div class="demo-container">
+                    <img class="demo-image" src="image/DaeJang.jpg" alt="Démo DaeJang" width="1600" height="876" loading="lazy" decoding="async">
+                    <div class="demo-links">
+                        <a class="btn btn-secondary" href="https://github.com/QuentinPerrusson21?tab=repositories" target="_blank" rel="noopener">
+                            <i class="bx bxl-github" aria-hidden="true"></i>
+                            Voir le code source
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="project-section">
+                <h2>
+                    Challenges Techniques Rencontrés
+                </h2>
+                <ul class="challenge-list">
+                    <li class="challenge-item">
+                        <h3>Le Responsive Design (La grille Bootstrap)</h3>
+                        <p>
+                            <strong>Défi :</strong> Adapter l'affichage de la carte du restaurant pour que le menu soit bien lisible sur ordinateur, mais aussi sur petit écran (téléphone) sans que tout se chevauche.<br>
+                            <strong>Solution :</strong> J'ai dû me documenter et faire plusieurs tests avec le système de grille de Bootstrap (les classes col-sm, col-md, etc.) pour comprendre comment les colonnes se réorganisent selon la taille de l'écran.
+                        </p>
+                    </li>
+                    <li class="challenge-item">
+                        <h3> Personnalisation de l'identité visuelle</h3>
+                        <p>
+                            <strong>Défi :</strong> Éviter que le site ressemble à un modèle Bootstrap "standard" (par défaut), notamment pour la barre de navigation (Navbar) et les couleurs des boutons.<br>
+                            <strong>Solution :</strong> J'ai créé un fichier CSS personnel pour venir "écraser" (surcharger) certaines règles de base de Bootstrap et appliquer la charte graphique de DaeJang.
+                        </p>
+                    </li>
+                </ul>
+            </section>
+
             <section class="project-section">
                 <h2>
                     Rétrospective Personnelle
                 </h2>
-                <div class="retrospective-box">
-                    <h3 style="margin-bottom: 15px; color: #8552F2;">Ce que j'ai appris :</h3>
-                    <ul>
-                        <li><strong>Intégration d'un Framework UI :</strong> Apprentissage de la logique Bootstrap pour accélérer le développement tout en gardant un code propre.</li>
-                        <li><strong>Maîtrise du Responsive Design :</strong> Utilisation du système de grille (Grid System) pour garantir une expérience parfaite du smartphone à l'écran large.</li>
-                        <li><strong>Personnalisation CSS :</strong> Savoir surcharger (override) les composants par défaut de Bootstrap pour créer une identité visuelle unique.</li>
-                        <li><strong>Logique Front-End :</strong> Manipulation du DOM avec JavaScript pour rendre l'interface interactive.</li>
-                    </ul>
-                </div>
+                <section class="project-section">
+                    <h2>
+                        Rétrospective Personnelle
+                    </h2>
+                    <div class="retrospective-box">
+                        <h3>Ce que j'ai appris :</h3>
+                        <ul>
+                            <li><strong>Intégration d'un Framework UI :</strong> Apprentissage de la logique Bootstrap pour accélérer le développement tout en gardant un code propre.</li>
+                            <li><strong>Maîtrise du Responsive Design :</strong> Utilisation du système de grille (Grid System) pour garantir une expérience parfaite du smartphone à l'écran large.</li>
+                            <li><strong>Personnalisation CSS :</strong> Savoir surcharger (override) les composants par défaut de Bootstrap pour créer une identité visuelle unique.</li>
+                            <li><strong>Logique Front-End :</strong> Manipulation du DOM avec JavaScript pour rendre l'interface interactive.</li>
+                        </ul>
+                    </div>
+                </section>
             </section>
-        </section>
-    </div>
+        </article>
+    </main>
 
-    <button class="theme-toggle" aria-label="Changer de theme" title="Mode clair / sombre"><i class='bx bx-sun'></i></button>
-    <script src="theme.js"></script></body>
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Quentin Perrusson</p>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
 </html>

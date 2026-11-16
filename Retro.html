@@ -3,128 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jeux Retro - Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simple-icons@latest/icons/icons.css">
-    <link rel="stylesheet" href="stylesheet.css">    
-
+    <title>Jeux Retro — Quentin Perrusson</title>
+    <meta name="description" content="Jeux Retro : Site en front qui contient plusieurs jeux retro">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@400;500&amp;display=swap">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="stylesheet.css">
     <script>(function(){try{var t=localStorage.getItem("theme");if(!t&&window.matchMedia("(prefers-color-scheme: dark)").matches)t="dark";if(t==="dark")document.documentElement.setAttribute("data-theme","dark");}catch(e){}})();</script>
 </head>
 <body>
+    <a class="skip-link" href="#contenu">Aller au contenu</a>
+
     <header class="header">
-        <a href="index.html" class="back-btn">
-            <i class='bx bx-arrow-back'></i>
-            <span>Retour au portfolio</span>
-        </a>
+        <a class="brand" href="index.html">Quentin Perrusson</a>
+        <nav class="nav" aria-label="Navigation principale">
+            <a href="index.html#a-propos">À propos</a>
+            <a href="index.html#projets">Projets</a>
+            <a href="index.html#competences">Compétences</a>
+            <a href="index.html#contact">Contact</a>
+        </nav>
+        <button class="theme-toggle" type="button" aria-label="Changer de thème">
+            <i class="bx bx-moon" aria-hidden="true"></i>
+        </button>
     </header>
 
-    <div class="project-container">
-        
-        <div class="project-hero">
-            <h1> Jeux Retro</h1>
-            <p class="project-tagline">Site en front qui contient plusieurs jeux retro</p>
-            
-            <div class="status-badges">
-                <span class="badge badge-live">
-                    <i class='bx  bx-check-circle'></i> 
-                    En ligne
-                </span>
-                <span class="badge badge-github">
-                    <i class='bx bxl-github'></i>
-                    Open Source
-                </span>
-            </div>
-        </div>
+    <main id="contenu" class="container project-page">
+        <a class="back-btn" href="index.html#projets">
+            <i class="bx bx-arrow-back" aria-hidden="true"></i>
+            <span>Tous les projets</span>
+        </a>
 
-        <section class="project-section">
-            <h2>
-                Contexte & Objectif
-            </h2>
-            <p>
-                <strong>Retro Games Hub</strong> est un projet réalisé en cours (choix libre) dont l'objectif principal était de mettre en pratique des concepts avancés de <strong>JavaScript</strong>. J'ai conçu une plateforme regroupant plusieurs classiques du jeu d'arcade : Pac-Man, Casse-briques, Racing, Space Invaders et Snake.
-            </p>
-            <p style="margin-top: 15px;">
-                Le défi consistait à ne pas seulement afficher du contenu, mais à créer une véritable interactivité : gestion des collisions, moteurs de rendu pour les jeux, et systèmes de score en temps réel, le tout dans une interface fluide et immersive.
-            </p>
-            <p style="margin-top: 15px;">
-                <strong>Besoin technique :</strong> Développer une application web interactive avec une logique de jeu complexe via JavaScript natif.
-            </p>
-        </section>
+        <article class="project-container">
 
-        <section class="project-section">
-            <h2>
-                Stack Technique
-            </h2>
-            <div class="tech-stack">
-                <div class="tech-item">
-                    <i class='bx bxl-html5'></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-css3'></i>
-                    <span>CSS3</span>
-                </div>
-                <div class="tech-item">
-                    <i class='bx bxl-javascript'></i>
-                    <span>JavaScript</span>
+            <div class="project-hero">
+                <h1> Jeux Retro</h1>
+                <p class="project-tagline">Site en front qui contient plusieurs jeux retro</p>
+
+                <div class="status-badges">
+                    <span class="badge badge-live">
+                        <i class="bx  bx-check-circle" aria-hidden="true"></i>
+                        En ligne
+                    </span>
+                    <span class="badge badge-github">
+                        <i class="bx bxl-github" aria-hidden="true"></i>
+                        Open Source
+                    </span>
                 </div>
             </div>
-        </section>
 
-        <section class="project-section">
-            <h2>
-                Démo & Déploiement
-            </h2>
-            <div class="demo-container">
-                <img src="image/RetroGame.png" alt="Démo du site de jeux retro" class="demo-image">
-                <div class="demo-links">
-                    <a href="https://github.com/QuentinPerrusson21?tab=repositories" target="_blank" class="demo-btn">
-                        <i class='bx bxl-github'></i>
-                        Voir le code source
-                    </a>
+            <section class="project-section">
+                <h2>
+                    Contexte & Objectif
+                </h2>
+                <p>
+                    <strong>Retro Games Hub</strong> est un projet réalisé en cours (choix libre) dont l'objectif principal était de mettre en pratique des concepts avancés de <strong>JavaScript</strong>. J'ai conçu une plateforme regroupant plusieurs classiques du jeu d'arcade : Pac-Man, Casse-briques, Racing, Space Invaders et Snake.
+                </p>
+                <p>
+                    Le défi consistait à ne pas seulement afficher du contenu, mais à créer une véritable interactivité : gestion des collisions, moteurs de rendu pour les jeux, et systèmes de score en temps réel, le tout dans une interface fluide et immersive.
+                </p>
+                <p>
+                    <strong>Besoin technique :</strong> Développer une application web interactive avec une logique de jeu complexe via JavaScript natif.
+                </p>
+            </section>
+
+            <section class="project-section">
+                <h2>
+                    Stack Technique
+                </h2>
+                <div class="tech-stack">
+                    <div class="tech-item">
+                        <i class="bx bxl-html5" aria-hidden="true"></i>
+                        <span>HTML5</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-css3" aria-hidden="true"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="tech-item">
+                        <i class="bx bxl-javascript" aria-hidden="true"></i>
+                        <span>JavaScript</span>
+                    </div>
                 </div>
-            </div>
-        </section>
-        <section class="project-section">
-            <h2>
-                Challenges Techniques Rencontrés
-            </h2>
-            <ul class="challenge-list">
-                <li class="challenge-item">
-                    <h3>Gestion Multi-Jeux & Contrôles</h3>
-                    <p>
-                        <strong>Défi :</strong> Éviter les conflits de touches entre les jeux et empêcher la page web de défiler pendant une partie.<br>
-                        <strong>Solution :</strong> Création d'un état global (<code>window.jeuActif</code>) pour isoler les contrôles du jeu en cours, et utilisation de <code>e.preventDefault()</code> pour figer l'écran.
-                    </p>
-                </li>
-                <li class="challenge-item">
-                    <h3>Sauvegarde Locale des Données</h3>
-                    <p>
-                        <strong>Défi :</strong> Conserver les records (High Scores) de chaque jeu et le choix du thème (sombre/clair) même après la fermeture du site.<br>
-                        <strong>Solution :</strong> Utilisation de l'API Web <code>localStorage</code> pour mémoriser ces informations de façon persistante dans le navigateur du joueur.
-                    </p>
-                </li>
-            </ul>
-        </section>
+            </section>
 
-        <section class="project-section">
-            <h2>
-                Rétrospective Personnelle
-            </h2>
-            <div class="retrospective-box">
-                <h3 style="margin-bottom: 15px; color: #8552F2;">Ce que j'ai appris :</h3>
-                <ul>
-                    <li><strong>Logique JavaScript Avancée :</strong> Structuration de code complexe (gestion des états, boucles de jeu, détection de collisions) sans moteur de jeu externe.</li>
-                    <li><strong>Maîtrise des Événements :</strong> Interception fluide des actions de l'utilisateur (clavier, boutons virtuels) pour garantir une jouabilité sans latence.</li>
-                    <li><strong>Persistance des Données :</strong> Manipulation de l'API <code>localStorage</code> pour conserver les meilleurs scores et les préférences de thème des joueurs.</li>
+            <section class="project-section">
+                <h2>
+                    Démo & Déploiement
+                </h2>
+                <div class="demo-container">
+                    <img class="demo-image" src="image/RetroGame.png" alt="Démo du site de jeux retro" width="3024" height="1654" loading="lazy" decoding="async">
+                    <div class="demo-links">
+                        <a class="btn btn-secondary" href="https://github.com/QuentinPerrusson21?tab=repositories" target="_blank" rel="noopener">
+                            <i class="bx bxl-github" aria-hidden="true"></i>
+                            Voir le code source
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="project-section">
+                <h2>
+                    Challenges Techniques Rencontrés
+                </h2>
+                <ul class="challenge-list">
+                    <li class="challenge-item">
+                        <h3>Gestion Multi-Jeux & Contrôles</h3>
+                        <p>
+                            <strong>Défi :</strong> Éviter les conflits de touches entre les jeux et empêcher la page web de défiler pendant une partie.<br>
+                            <strong>Solution :</strong> Création d'un état global (<code>window.jeuActif</code>) pour isoler les contrôles du jeu en cours, et utilisation de <code>e.preventDefault()</code> pour figer l'écran.
+                        </p>
+                    </li>
+                    <li class="challenge-item">
+                        <h3>Sauvegarde Locale des Données</h3>
+                        <p>
+                            <strong>Défi :</strong> Conserver les records (High Scores) de chaque jeu et le choix du thème (sombre/clair) même après la fermeture du site.<br>
+                            <strong>Solution :</strong> Utilisation de l'API Web <code>localStorage</code> pour mémoriser ces informations de façon persistante dans le navigateur du joueur.
+                        </p>
+                    </li>
                 </ul>
-            </div>
-        </section>
-    </div>
+            </section>
 
-    <button class="theme-toggle" aria-label="Changer de theme" title="Mode clair / sombre"><i class='bx bx-sun'></i></button>
-    <script src="theme.js"></script></body>
+            <section class="project-section">
+                <h2>
+                    Rétrospective Personnelle
+                </h2>
+                <div class="retrospective-box">
+                    <h3>Ce que j'ai appris :</h3>
+                    <ul>
+                        <li><strong>Logique JavaScript Avancée :</strong> Structuration de code complexe (gestion des états, boucles de jeu, détection de collisions) sans moteur de jeu externe.</li>
+                        <li><strong>Maîtrise des Événements :</strong> Interception fluide des actions de l'utilisateur (clavier, boutons virtuels) pour garantir une jouabilité sans latence.</li>
+                        <li><strong>Persistance des Données :</strong> Manipulation de l'API <code>localStorage</code> pour conserver les meilleurs scores et les préférences de thème des joueurs.</li>
+                    </ul>
+                </div>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2026 Quentin Perrusson</p>
+        </div>
+    </footer>
+
+    <script src="theme.js"></script>
+</body>
 </html>
